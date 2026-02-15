@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - DecorVista</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .wishlist-container {
+            padding: 4rem 5%;
+            background-color: #f8f9fa;
+            min-height: 70vh;
+        }
+
+        .wishlist-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .wishlist-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wishlist-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .wishlist-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .wishlist-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .wishlist-item-info {
+            padding: 1.5rem;
+        }
+
+        .wishlist-item-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .wishlist-item-price {
+            font-size: 1.3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .wishlist-item-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .wishlist-item-actions button {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .buy-now-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #219a52;
+        }
+
+        .remove-btn {
+
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .remove-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .empty-wishlist {
+            text-align: center;
+            padding: 3rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .empty-wishlist-icon {
+            font-size: 4rem;
+            color: #bdc3c7;
+            margin-bottom: 1rem;
+        }
+
+        .empty-wishlist h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .empty-wishlist p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .continue-shopping-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .continue-shopping-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .main {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>DecorVista</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="wishlist-container">
+            <h2>My Wishlist</h2>
+            <div id="wishlistContent"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DecorVista | All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | <a href="index.html#about">About</a> | <a href="products.html">Products</a> | <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Get wishlist from localStorage
+        function getWishlist() {
+            const wishlist = localStorage.getItem('wishlist');
+            return wishlist ? JSON.parse(wishlist) : [];
+        }
+
+        // Save wishlist to localStorage
+        function saveWishlist(wishlist) {
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        }
+
+        // Remove item from wishlist
+        function removeFromWishlist(name) {
+            let wishlist = getWishlist();
+            wishlist = wishlist.filter(item => item.name !== name);
+            saveWishlist(wishlist);
+            displayWishlist();
+        }
+
+        // Get cart from localStorage
+        function getCart() {
+            const cart = localStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        // Save cart to localStorage
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Add item to cart
+        function addToCart(name, price, image) {
+            let cart = getCart();
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity = (existingItem.quantity || 1) + 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            
+            saveCart(cart);
+            alert(name + ' added to cart!');
+        }
+
+        // Buy Now functionality - adds directly to order history
+        function buyNow(name, price, image) {
+            if (confirm(`Are you sure you want to buy ${name} for ${price}?\n\nThis will place an order immediately.`)) {
+                // Get existing orders or initialize empty array
+                let orders = JSON.parse(localStorage.getItem('orders')) || [];
+                
+                // Generate order ID
+                const orderId = 'ORD-' + String(orders.length + 1).padStart(3, '0');
+                
+                // Create new order
+                const newOrder = {
+                    id: orderId,
+                    date: new Date().toISOString().split('T')[0],
+                    items: [name],
+                    total: price,
+                    status: 'Processing',
+                    image: image
+                };
+                
+                // Add to orders
+                orders.push(newOrder);
+                
+                // Save to localStorage
+                localStorage.setItem('orders', JSON.stringify(orders));
+                
+                // Show success message
+                alert(`Order placed successfully!\n\nOrder ID: ${orderId}\nProduct: ${name}\nTotal: ${price}\n\nYou can view your order in the Profile page.`);
+                
+                // Optionally redirect to profile page
+                if (confirm('Would you like to view your order history?')) {
+                    window.location.href = 'profile.html';
+                }
+            }
+        }
+
+        // Display wishlist items
+
+        function displayWishlist() {
+            const wishlistContent = document.getElementById('wishlistContent');
+            const wishlist = getWishlist();
+
+            if (wishlist.length === 0) {
+                wishlistContent.innerHTML = `
+                    <div class="empty-wishlist">
+                        <div class="empty-wishlist-icon">
+                            <i class="fas fa-heart-broken"></i>
+                        </div>
+                        <h3>Your Wishlist is Empty</h3>
+                        <p>You haven't added any items to your wishlist yet. Start exploring our products and add your favorite items!</p>
+                        <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+                    </div>
+                `;
+            } else {
+                let itemsHTML = '<div class="wishlist-items">';
+                
+                wishlist.forEach(item => {
+                    itemsHTML += `
+                        <div class="wishlist-item">
+                            <img src="${item.image}" alt="${item.name}" class="wishlist-item-image">
+                            <div class="wishlist-item-info">
+                                <div class="wishlist-item-name">${item.name}</div>
+                                <div class="wishlist-item-price">${item.price}</div>
+                                <div class="wishlist-item-actions">
+                                    <button class="buy-now-btn" onclick="buyNow('${item.name.replace(/'/g, "\\'")}', '${item.price}', '${item.image.replace(/'/g, "\\'")}')">
+                                        <i class="fas fa-bolt"></i> Buy Now
+                                    </button>
+                                    <button class="add-to-cart-btn" onclick="addToCart('${item.name.replace(/'/g, "\\'")}', '${item.price}', '${item.image.replace(/'/g, "\\'")}')">
+                                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                                    </button>
+                                    <button class="remove-btn" onclick="removeFromWishlist('${item.name.replace(/'/g, "\\'")}')" style="flex: 0.5;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    `;
+                });
+
+                itemsHTML += '</div>';
+                wishlistContent.innerHTML = itemsHTML;
+            }
+        }
+
+        // Load wishlist on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            displayWishlist();
+        });
+    </script>
+</body>
+</html>

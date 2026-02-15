@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecorVista - Furniture E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>DecorVista</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#category">Category</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button type="submit" onclick="handleSearch()"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="icons">
+                    <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Elevate Your Space</h2>
+                <p>Discover stylish and comfortable furniture for your dream home,shop online now with DecorVista today.</p>
+                <a href="products.html" class="explore-btn">Explore Now</a>
+            </div>
+        </section>
+        <section id="about" class="features">
+            <h2>About DecorVista</h2>
+            <p>At DecorVista, we are passionate about transforming your living spaces with high-quality, stylish furniture. Our mission is to provide exceptional products and services that make home decoration effortless and enjoyable. With years of experience in the furniture industry, we curate a wide range of products to suit every taste and budget.</p>
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-truck feature-icon"></i>
+                    <h3>Free Shipping</h3>
+                    <p>Enjoy complimentary shipping on all orders over $50. We ensure your furniture arrives safely and promptly at your doorstep, making your shopping experience seamless.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-money-bill-wave feature-icon"></i>
+                    <h3>Offline Payment</h3>
+                    <p>Convenient offline payment options available, including cash on delivery and in-store payments. No need to worry about online transactions – shop with ease and peace of mind.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Online Support</h3>
+                    <p>Our dedicated customer support team is here to help 24/7. Whether you have questions about products, orders, or need styling advice, we're just a call or chat away.</p>
+                </div>
+            </div>
+        </section>
+        <section id="category" class="categories">
+            <h2>Top Categories</h2>
+            <div class="category-layout">
+                <div class="category-left">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sofa Bed">
+                        <h3>Sofa Bed</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ottoman Storage">
+                        <h3>Ottoman Storage</h3>
+                    </div>
+                </div>
+                <div class="category-right">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coffee Table">
+                        <h3>Coffee Table</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bookshelf">
+                        <h3>Bookshelf</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" alt="Wall Shelves">
+                        <h3>Wall Shelves</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recliner Chair">
+                        <h3>Recliner Chair</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 DecorVista | All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#category">Categories</a> | <a href="#contact">Contact</a>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+</footer>
+    </main>
+    
+    <script>
+        // Search functionality - redirect to products page with search query
+        function handleSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.trim();
+            
+            if (searchTerm) {
+                // Redirect to products page with search query
+                window.location.href = 'products.html?search=' + encodeURIComponent(searchTerm);
+            } else {
+                // If empty search, just go to products page
+                window.location.href = 'products.html';
+            }
+        }
+
+        // Handle Enter key press in search input
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Use JSON.stringify to convert the form data to a JSON string
+            const jsonString = JSON.stringify(formData);
+            
+            // Display the JSON string
+            <!-- document.getElementById('jsonOutput').innerHTML = '<pre>' + jsonString + '</pre>'; -->
+            
+            // Store in localStorage (not visible on webpage)
+            localStorage.setItem('contactFormData', jsonString);
+            
+            // Also log to console
+            console.log('Contact Form Data (JSON):', jsonString);
+            
+            // Clear the form after submission
+            this.reset();
+        });
+    </script>
+
+    
+</body>
+</html>

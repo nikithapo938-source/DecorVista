@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - DecorVista</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .profile-container {
+            padding-top: 80px;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .welcome-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .welcome-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Account Creation Form */
+        .account-form-section {
+            max-width: 500px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .account-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .account-card h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .account-card .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .account-card label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .account-card input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .account-card input:focus {
+            border-color: #e74c3c;
+            outline: none;
+        }
+
+        .create-account-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .create-account-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Dashboard Styles */
+        .dashboard-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .dashboard-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-card h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dashboard-card h3 i {
+            color: #e74c3c;
+        }
+
+        .dashboard-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .dashboard-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .dashboard-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .dashboard-btn.secondary {
+            background-color: #95a5a6;
+        }
+
+        .dashboard-btn.secondary:hover {
+            background-color: #7f8c8d;
+        }
+
+        /* Order History */
+        .order-list {
+            margin-top: 1rem;
+        }
+
+        .order-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .order-id {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .order-status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .order-status.delivered {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .order-status.processing {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .order-status.shipped {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+
+        .order-details {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .no-orders {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Cancel Order Button */
+        .cancel-order-btn {
+            margin-top: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cancel-order-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .cancel-order-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .order-actions {
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        /* User Info */
+        .user-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .user-details {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .logout-btn {
+            margin-top: 1rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <h1>DecorVista</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="profile.html" class="active"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar" class="sidebar">
+            <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Welcome to DecorVista</h2>
+            <p>Your personal furniture shopping destination</p>
+        </section>
+
+        <!-- Account Creation Form (shown when no account) -->
+        <section id="accountFormSection" class="account-form-section">
+            <div class="account-card">
+                <h3><i class="fas fa-user-plus"></i> Create Your Account</h3>
+                <form id="accountForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                    </div>
+                    <button type="submit" class="create-account-btn">
+                        <i class="fas fa-user-check"></i> Create Account
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Account Dashboard (shown when account exists) -->
+        <section id="dashboardSection" class="dashboard-section hidden">
+            <!-- User Info -->
+            <div class="user-info">
+                <h3><i class="fas fa-user-circle"></i> <span id="userNameDisplay">User</span></h3>
+                <div class="user-details">
+                    <p><i class="fas fa-envelope"></i> <span id="userEmailDisplay">email@example.com</span></p>
+                </div>
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Order History Card -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-history"></i> Order History</h3>
+                    <p>View your past orders and track their status</p>
+                    <div id="orderList" class="order-list">
+                        <!-- Orders will be populated here -->
+                    </div>
+                </div>
+
+                <!-- My Wishlist Card -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-heart"></i> My Wishlist</h3>
+                    <p>View and manage your saved items</p>
+                    <p><strong id="wishlistCount">0</strong> items in your wishlist</p>
+                    <a href="wishlist.html" class="dashboard-btn">
+                        <i class="fas fa-arrow-right"></i> View Wishlist
+                    </a>
+                </div>
+
+                <!-- My Cart Card -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-shopping-cart"></i> My Cart</h3>
+                    <p>Review items ready for checkout</p>
+                    <p><strong id="cartCount">0</strong> items in your cart</p>
+                    <a href="cart.html" class="dashboard-btn">
+                        <i class="fas fa-arrow-right"></i> View Cart
+                    </a>
+                </div>
+
+                <!-- Continue Shopping -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-store"></i> Continue Shopping</h3>
+                    <p>Browse our latest furniture collections</p>
+                    <a href="products.html" class="dashboard-btn secondary">
+                        <i class="fas fa-shopping-bag"></i> Browse Products
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DecorVista | All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | <a href="index.html#about">About</a> | <a href="products.html">Products</a> | <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !hamburger.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Check if user is logged in
+        function checkLoginStatus() {
+            const userAccount = localStorage.getItem('userAccount');
+            if (userAccount) {
+                showDashboard(JSON.parse(userAccount));
+            } else {
+                showAccountForm();
+            }
+        }
+
+        // Show account creation form
+        function showAccountForm() {
+            document.getElementById('accountFormSection').classList.remove('hidden');
+            document.getElementById('dashboardSection').classList.add('hidden');
+        }
+
+        // Show dashboard
+        function showDashboard(userData) {
+            document.getElementById('accountFormSection').classList.add('hidden');
+            document.getElementById('dashboardSection').classList.remove('hidden');
+            
+            // Update user info
+            document.getElementById('userNameDisplay').textContent = userData.fullName;
+            document.getElementById('userEmailDisplay').textContent = userData.email;
+            
+            // Load order history
+            loadOrderHistory();
+            
+            // Update counts
+            updateCounts();
+        }
+
+        // Handle account creation
+        document.getElementById('accountForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // Create user account object
+            const userAccount = {
+                fullName: fullName,
+                email: email,
+                password: password, // In a real app, this should be hashed
+                createdAt: new Date().toISOString()
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('userAccount', JSON.stringify(userAccount));
+            
+            // Show success message and dashboard
+            alert('Account created successfully! Welcome to DecorVista, ' + fullName + '!');
+            showDashboard(userAccount);
+        });
+
+        // Load order history
+        function loadOrderHistory() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+            const orderList = document.getElementById('orderList');
+            
+            if (orders.length === 0) {
+                orderList.innerHTML = '<p class="no-orders">No orders yet. Start shopping!</p>';
+                return;
+            }
+            
+            // Show only last 3 orders
+            const recentOrders = orders.slice(-3).reverse();
+            
+            orderList.innerHTML = recentOrders.map(order => {
+                const canCancel = order.status === 'Processing' || order.status === 'Shipped';
+                return `
+                <div class="order-item">
+                    <div class="order-header">
+                        <span class="order-id">${order.id}</span>
+                        <span class="order-status ${order.status.toLowerCase()}">${order.status}</span>
+                    </div>
+                    <div class="order-details">
+                        ${order.items.length} items • ${order.total} • ${new Date(order.date).toLocaleDateString()}
+                    </div>
+                    <div class="order-actions">
+                        ${canCancel ? `<button class="cancel-order-btn" onclick="cancelOrder('${order.id}')"><i class="fas fa-times"></i> Cancel Order</button>` : ''}
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // Cancel order function
+        function cancelOrder(orderId) {
+            if (confirm('Are you sure you want to cancel this order?')) {
+                let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+                
+                // Find and update the order status
+                const orderIndex = orders.findIndex(order => order.id === orderId);
+                if (orderIndex !== -1) {
+                    orders[orderIndex].status = 'Cancelled';
+                    localStorage.setItem('orders', JSON.stringify(orders));
+                    alert('Order ' + orderId + ' has been cancelled successfully.');
+                    loadOrderHistory(); // Refresh the order list
+                }
+            }
+        }
+
+
+
+        // Update wishlist and cart counts
+        function updateCounts() {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            document.getElementById('wishlistCount').textContent = wishlist.length;
+            
+            const cartCount = cart.reduce((total, item) => total + (item.quantity || 1), 0);
+            document.getElementById('cartCount').textContent = cartCount;
+        }
+
+        // Logout function
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                localStorage.removeItem('userAccount');
+                showAccountForm();
+                alert('You have been logged out successfully.');
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+        });
+    </script>
+</body>
+</html>
