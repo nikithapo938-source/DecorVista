@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - DecorVista</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         .cart-container {
             padding: 4rem 5%;
@@ -251,12 +253,14 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="hamburger" onclick="toggleSidebar()">
+            <!-- <div class="hamburger" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
-            </div>
+            </div> -->
             <div class="logo">
                 <h1>DecorVista</h1>
             </div>
+
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
@@ -276,7 +280,7 @@
                 </div>
             </div>
         </nav>
-        <div id="sidebar" class="sidebar">
+        <!-- <div id="sidebar" class="sidebar">
             <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
             <h3>Menu</h3>
             <ul>
@@ -286,7 +290,7 @@
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="profile.html">Profile</a></li>
             </ul>
-        </div>
+        </div> -->
     </header>
 
     <main class="main">
@@ -296,17 +300,94 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 DecorVista | All rights reserved.</p>
-        <div class="footer-links">
-            <a href="index.html">Home</a> | <a href="index.html#about">About</a> | <a href="products.html">Products</a> | <a href="index.html#contact">Contact</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <h3>DecorVista</h3>
+                <p>Transforming houses into dream homes with premium furniture and exceptional service since 2011.</p>
+                <p class="tagline">"Your Home, Your Style"</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                    <li><a href="index.html#category"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links-list">
+                    <li><a href="profile.html"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                    <li><a href="wishlist.html"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Shopping Cart</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+
+            <!-- Newsletter -->
+            <!-- <div class="footer-section footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get exclusive offers, design tips, and new arrival updates!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div> -->
         </div>
-        <div class="social-media">
-            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <p>Follow Us On Social Media</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+
+            <!-- Payment Methods -->
+            <!-- <div class="payment-methods">
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-amex" title="American Express"></i>
+                <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+            </div> -->
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DecorVista | All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
         </div>
     </footer>
+
 
     <script>
         // Get cart from localStorage
@@ -368,7 +449,8 @@
         function calculateTotals(cart) {
             let subtotal = 0;
             cart.forEach(item => {
-                const price = parseFloat(item.price.replace('$', ''));
+const price = parseFloat(item.price.replace('₹', ''));
+
                 subtotal += price * (item.quantity || 1);
             });
             
@@ -409,7 +491,7 @@
                 cart.forEach(item => {
                     itemsHTML += `
                         <div class="cart-item">
-                            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/120x120?text=Image+Not+Available'">
                             <div class="cart-item-details">
                                 <div class="cart-item-name">${item.name}</div>
                                 <div class="cart-item-price">${item.price}</div>
@@ -437,7 +519,8 @@
                         <h3>Order Summary</h3>
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>$${totals.subtotal}</span>
+<span>₹${totals.subtotal}</span>
+
                         </div>
                         <div class="summary-row">
                             <span>Shipping</span>
@@ -445,11 +528,13 @@
                         </div>
                         <div class="summary-row">
                             <span>Tax (8%)</span>
-                            <span>$${totals.tax}</span>
+<span>₹${totals.tax}</span>
+
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>$${totals.total}</span>
+<span>₹${totals.total}</span>
+
                         </div>
                         <button class="checkout-btn" onclick="checkout()">
                             <i class="fas fa-credit-card"></i> Proceed to Checkout
@@ -477,7 +562,8 @@
                 id: 'ORD-' + Date.now(),
                 date: new Date().toISOString().split('T')[0],
                 items: cart.map(item => item.name),
-                total: '$' + totals.total,
+total: '₹' + totals.total,
+
                 status: 'Processing'
             };
             

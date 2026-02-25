@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DecorVista - Furniture E-Commerce</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about-styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="categories-styles.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -37,103 +47,382 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h2>Elevate Your Space</h2>
-                <p>Discover stylish and comfortable furniture for your dream home,shop online now with DecorVista today.</p>
+                <p>Discover stylish and comfortable furniture for your dream home,shop online now with DecorVista today.
+                </p>
                 <a href="products.html" class="explore-btn">Explore Now</a>
             </div>
         </section>
-        <section id="about" class="features">
-            <h2>About DecorVista</h2>
-            <p>At DecorVista, we are passionate about transforming your living spaces with high-quality, stylish furniture. Our mission is to provide exceptional products and services that make home decoration effortless and enjoyable. With years of experience in the furniture industry, we curate a wide range of products to suit every taste and budget.</p>
-            <h2>Why Choose Us?</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="fas fa-truck feature-icon"></i>
-                    <h3>Free Shipping</h3>
-                    <p>Enjoy complimentary shipping on all orders over $50. We ensure your furniture arrives safely and promptly at your doorstep, making your shopping experience seamless.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-money-bill-wave feature-icon"></i>
-                    <h3>Offline Payment</h3>
-                    <p>Convenient offline payment options available, including cash on delivery and in-store payments. No need to worry about online transactions – shop with ease and peace of mind.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-headset feature-icon"></i>
-                    <h3>Online Support</h3>
-                    <p>Our dedicated customer support team is here to help 24/7. Whether you have questions about products, orders, or need styling advice, we're just a call or chat away.</p>
-                </div>
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h2>About DecorVista</h2>
+                <p class="about-tagline">Transforming Houses into Dream Homes</p>
+                <div class="about-divider"></div>
+                <p class="about-description">We are passionate about creating beautiful living spaces with high-quality,
+                    stylish furniture that reflects your unique personality.</p>
             </div>
-        </section>
-        <section id="category" class="categories">
-            <h2>Top Categories</h2>
-            <div class="category-layout">
-                <div class="category-left">
-                    <div class="category-item">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sofa Bed">
-                        <h3>Sofa Bed</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ottoman Storage">
-                        <h3>Ottoman Storage</h3>
-                    </div>
-                </div>
-                <div class="category-right">
-                    <div class="category-item">
-                        <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coffee Table">
-                        <h3>Coffee Table</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bookshelf">
-                        <h3>Bookshelf</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" alt="Wall Shelves">
-                        <h3>Wall Shelves</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recliner Chair">
-                        <h3>Recliner Chair</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-            </form>
         </section>
 
-        <footer>
-            <p>&copy; 2026 DecorVista | All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#category">Categories</a> | <a href="#contact">Contact</a>
+        <!-- About Main Content -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-story">
+                    <div class="story-content">
+                        <h3>Our Story</h3>
+                        <p>At DecorVista, we believe that every home deserves to be beautiful. Founded with a passion
+                            for exceptional design and quality craftsmanship, we've spent years curating the finest
+                            furniture collections to help you create spaces you'll love.</p>
+                        <p>Our mission is simple: to provide exceptional products and services that make home decoration
+                            effortless and enjoyable. From modern minimalism to classic elegance, we have something for
+                            every taste and budget.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="Images/first (1).jpeg"
+                            alt="DecorVista Showroom">
+                    </div>
+                </div>
             </div>
-            <div class="social-media">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-couch"></i></div>
+                    <div class="stat-number" data-count="500">500+</div>
+                    <div class="stat-label">Premium Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                    <div class="stat-number" data-count="10000">10,000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <div class="stat-number" data-count="15">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <div class="stat-number" data-count="50">50+</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
             </div>
-</footer>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="section-header">
+                <h2>Why Choose Us?</h2>
+                <p class="section-subtitle">We're committed to providing the best furniture shopping experience</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-truck feature-icon"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Enjoy complimentary shipping on all orders over ₹4,000. We ensure your furniture arrives safely
+                        and promptly at your doorstep.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-money-bill-wave feature-icon"></i>
+                    </div>
+                    <h3>Cash on Delivery</h3>
+                    <p>Convenient payment options including cash on delivery. Shop with ease and peace of mind with our
+                        secure payment methods.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-headset feature-icon"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated customer support team is here to help round the clock. Get assistance with
+                        products, orders, or styling advice.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>Every piece of furniture undergoes rigorous quality checks. We stand behind our products with
+                        comprehensive warranties.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-leaf feature-icon"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>We prioritize sustainable materials and eco-friendly manufacturing processes to protect our
+                        planet for future generations.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-undo feature-icon"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied? No problem! We offer hassle-free returns within 30 days of delivery for your
+                        complete peace of mind.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="about-cta">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Discover our curated collection of premium furniture and start creating your dream home today.</p>
+                <a href="products.html" class="cta-btn">Explore Our Collection</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="category" class="categories-section">
+            <div class="categories-container">
+                <div class="categories-header">
+                    <h2>Explore Our Categories</h2>
+                    <p>Discover our wide range of premium furniture collections designed for every space</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card featured">
+                        <img src="Images/Sofa Bed/4.jpeg" alt="Sofa Bed" class="category-card-image">
+                        <span class="category-badge">Popular</span>
+                        <div class="category-overlay">
+                            <h3>Sofa Bed</h3>
+                            <p>Transform your living room with our comfortable and stylish sofa beds</p>
+                            <a href="products.html" class="category-btn">View Collection <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="Images/Ottoman storage/5.jpg" alt="Ottoman Storage" class="category-card-image">
+                        <div class="category-overlay">
+                            <h3>Ottoman Storage</h3>
+                            <p>Smart storage solutions for modern homes</p>
+                            <a href="products.html" class="category-btn">View Collection <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="Images/Coffee table/6.jpeg" alt="Coffee Table" class="category-card-image">
+                        <span class="category-badge">New</span>
+                        <div class="category-overlay">
+                            <h3>Coffee Table</h3>
+                            <p>Elegant centerpieces for your living space</p>
+                            <a href="products.html" class="category-btn">View Collection <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- <div class="category-card">
+                        <img src="" alt="Bookshelf" class="category-card-image">
+                        <div class="category-overlay">
+                            <h3>Bookshelf</h3>
+                            <p>Organize your books in style</p>
+                            <a href="products.html" class="category-btn">View Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div> -->
+                    <div class="category-card">
+                        <img src="Images/Wall shelves/3.jpeg" alt="Wall Shelves" class="category-card-image">
+                        <div class="category-overlay">
+                            <h3>Wall Shelves</h3>
+                            <p>Maximize your wall space beautifully</p>
+                            <a href="products.html" class="category-btn">View Collection <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="Images/Recliner chair/3.jpeg" alt="Recliner Chair" class="category-card-image">
+                        <span class="category-badge">Best Seller</span>
+                        <div class="category-overlay">
+                            <h3>Recliner Chair</h3>
+                            <p>Ultimate comfort for relaxation</p>
+                            <a href="products.html" class="category-btn">View Collection <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-container">
+                    <a href="products.html" class="view-all-btn">View All Categories <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Get In Touch</h2>
+                    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Visit Us</h4>
+                                <p>123 Furniture Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <p>+91 98765 43210<br>Mon-Sat, 9am-6pm</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <p>support@decorvista.com<br>sales@decorvista.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <h3>Send Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment"></i> Your Message</label>
+                                <textarea id="message" name="message" required
+                                    placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <p>Connect with us on social media</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <h3>DecorVista</h3>
+                    <p>Transforming houses into dream homes with premium furniture and exceptional service since 2011.
+                    </p>
+                    <p class="tagline">"Your Home, Your Style"</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="#category"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Shopping Cart</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mumbai,
+                        Maharashtra 400001</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+                </div>
+
+                <!-- Newsletter -->
+                <!-- <div class="footer-section footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get exclusive offers, design tips, and new arrival updates!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div> -->
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+                <p>Follow Us On Social Media</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://pinterest.com" target="_blank" title="Pinterest"><i
+                            class="fab fa-pinterest-p"></i></a>
+                </div>
+
+                <!-- Payment Methods -->
+                <!-- <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+                </div> -->
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 DecorVista | All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+
     </main>
-    
+
     <script>
         // Search functionality - redirect to products page with search query
         function handleSearch() {
             const searchInput = document.getElementById('searchInput');
             const searchTerm = searchInput.value.trim();
-            
+
             if (searchTerm) {
                 // Redirect to products page with search query
                 window.location.href = 'products.html?search=' + encodeURIComponent(searchTerm);
@@ -144,40 +433,41 @@
         }
 
         // Handle Enter key press in search input
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 handleSearch();
             }
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
 
             e.preventDefault();
-            
+
             // Collect form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 message: document.getElementById('message').value
             };
-            
+
             // Use JSON.stringify to convert the form data to a JSON string
             const jsonString = JSON.stringify(formData);
-            
+
             // Display the JSON string
             <!-- document.getElementById('jsonOutput').innerHTML = '<pre>' + jsonString + '</pre>'; -->
-            
+
             // Store in localStorage (not visible on webpage)
             localStorage.setItem('contactFormData', jsonString);
-            
+
             // Also log to console
             console.log('Contact Form Data (JSON):', jsonString);
-            
+
             // Clear the form after submission
             this.reset();
         });
     </script>
 
-    
+
 </body>
+
 </html>

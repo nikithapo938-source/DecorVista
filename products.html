@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - DecorVista</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -27,6 +31,8 @@
                     <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                     <a href="profile.html"><i class="fas fa-user"></i></a>
                 </div>
+            </div>
+            </div>
             </div>
         </nav>
         <div id="sidebar" class="sidebar">
@@ -60,377 +66,689 @@
             </div>
             <div class="products-grid" id="productsGrid">
                 <!-- Recliner Chair -->
-                <div class="product-card" data-category="recliner-chair" data-name="Luxury Recliner Chair" data-price="$499" data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Luxury Recliner Chair', '$499', 'Comfortable recliner chair with adjustable positions.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Recliner Chair" onclick="event.stopPropagation(); openModal('Luxury Recliner Chair', '$499', 'Comfortable recliner chair with adjustable positions.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                <div class="product-card" data-category="recliner-chair" data-name="Luxury Recliner Chair"
+                    data-price="₹499"
+                    data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Luxury Recliner Chair', '₹499', 'Comfortable recliner chair with adjustable positions.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Recliner chair/1.jpeg" alt="Luxury Recliner Chair"
+                        onclick="event.stopPropagation(); openModal('Luxury Recliner Chair', '₹499', 'Comfortable recliner chair with adjustable positions.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
 
                     <h3>Luxury Recliner Chair</h3>
-                    <p class="price">$499</p>
+                    <p>Comfortable chair with adjustable positions.</p>
+                    <p class="price">&#8377;499</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this, 'Luxury Recliner Chair', '$499', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Luxury Recliner Chair', '$499', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this, 'Luxury Recliner Chair', '₹499', 'Images/Recliner chair/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Luxury Recliner Chair', '₹499', '//Images/Recliner chair/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="recliner-chair" data-name="Modern Recliner Chair" data-price="$399" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" onclick="openModal('Modern Recliner Chair', '$399', 'Sleek design with premium comfort.')">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" alt="Modern Recliner Chair">
+                <div class="product-card" data-category="recliner-chair" data-name="Modern Recliner Chair"
+                    data-price="₹399"
+                    data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80"
+                    onclick="openModal('Modern Recliner Chair', '₹399', 'Sleek design with premium comfort.')">
+
+                    <img src="Images/Recliner chair/2.jpeg" alt="Modern Recliner Chair">
                     <h3>Modern Recliner Chair</h3>
-                    <p class="price">$399</p>
+                    <p>Sleek design with premium comfort.</p>
+                    <p class="price">&#8377;399</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Modern Recliner Chair','$399','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Modern Recliner Chair', '$399', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Modern Recliner Chair','₹399','Images/Recliner chair/2.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Modern Recliner Chair', '₹399', 'Images/Recliner chair/2.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Coffee Table -->
-                <div class="product-card" data-category="coffee-table" data-name="Elegant Coffee Table" data-price="$199" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Elegant Coffee Table', '$199', 'Stylish coffee table for your living room.')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elegant Coffee Table">
+                <div class="product-card" data-category="coffee-table" data-name="Elegant Coffee Table"
+                    data-price="₹199"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Elegant Coffee Table', '₹199', 'Stylish coffee table for your living room.')">
+
+                    <img src="Images/Coffee table/1.jpeg" alt="Elegant Coffee Table">
                     <h3>Elegant Coffee Table</h3>
-                    <p class="price">$199</p>
+                    <p>Stylish coffee table for your living room.</p>
+                    <p class="price">&#8377;799</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Elegant Coffee Table','$199','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Elegant Coffee Table', '$199', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Elegant Coffee Table','₹199','Images/Coffee table/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Elegant Coffee Table', '₹199', 'Images/Coffee table/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="coffee-table" data-name="Wooden Coffee Table" data-price="$249" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Wooden Coffee Table', '$249', 'Classic wooden design with storage.')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wooden Coffee Table">
+                <div class="product-card" data-category="coffee-table" data-name="Wooden Coffee Table" data-price="₹249"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Wooden Coffee Table', '₹249', 'Classic wooden design with storage.')">
+
+                    <img src="Images/Coffee table/2.jpeg" alt="Wooden Coffee Table">
                     <h3>Wooden Coffee Table</h3>
-                    <p class="price">$249</p>
+                    <p>Classic wooden design with storage.</p>
+                    <p class="price">&#8377;549</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Wooden Coffee Table','$249','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Wooden Coffee Table', '$249', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Wooden Coffee Table','₹249','Images/Coffee table/2.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Wooden Coffee Table', '₹249', 'Images/Coffee table/2.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Bookshelf -->
-                <div class="product-card" data-category="bookshelf" data-name="Modern Bookshelf" data-price="$299" data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Modern Bookshelf', '$299', 'Organize your books with style.')">
-                    <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern Bookshelf">
+                <div class="product-card" data-category="bookshelf" data-name="Modern Bookshelf" data-price="₹299"
+                    data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Modern Bookshelf', '₹299', 'Organize your books with style.')">
+
+                    <img src="Images/BookShelf/1.jpeg" alt="Modern Bookshelf">
                     <h3>Modern Bookshelf</h3>
-                    <p class="price">$299</p>
+                    <p>Organize your books with style.</p>
+                    <p class="price">&#8377;764</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Modern Bookshelf','$299','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Modern Bookshelf', '$299', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Modern Bookshelf','₹299','Images/BookShelf/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Modern Bookshelf', '₹299', 'Images/BookShelf/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="bookshelf" data-name="Tall Bookshelf" data-price="$349" data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Tall Bookshelf', '$349', 'Tall bookshelf for ample storage.')">
-                    <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tall Bookshelf">
+                <div class="product-card" data-category="bookshelf" data-name="Tall Bookshelf" data-price="₹349"
+                    data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Tall Bookshelf', '₹349', 'Tall bookshelf for ample storage.')">
+
+                    <img src="Images/BookShelf/2.jpeg" alt="Tall Bookshelf">
                     <h3>Tall Bookshelf</h3>
-                    <p class="price">$349</p>
+                    <p>Tall bookshelf for ample storage.</p>
+                    <p class="price">&#8377;849</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Tall Bookshelf','$349','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Tall Bookshelf', '$349', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Tall Bookshelf','₹349','Images/BookShelf/2.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Tall Bookshelf', '₹349', 'Images/BookShelf/2.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- End Table -->
-                <div class="product-card" data-category="end-table" data-name="Side End Table" data-price="$149" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Side End Table', '$149', 'Perfect side table for your sofa.')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Side End Table">
+                <div class="product-card" data-category="end-table" data-name="Side End Table" data-price="₹149"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Side End Table', '₹149', 'Perfect side table for your sofa.')">
+
+                    <img src="Images/End table/1.jpeg" alt="Side End Table">
                     <h3>Side End Table</h3>
-                    <p class="price">$149</p>
+                    <p>Perfect side table for your sofa.</p>
+                    <p class="price">&#8377;549</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Side End Table','$149','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Side End Table', '$149', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Side End Table','₹149','Images/End table/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Side End Table', '₹149', 'Images/End table/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Sofa Bed -->
-                <div class="product-card" data-category="sofa-bed" data-name="Comfort Sofa Bed" data-price="$399" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Comfort Sofa Bed', '$399', 'Convert your sofa into a bed.')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Comfort Sofa Bed">
+                <div class="product-card" data-category="sofa-bed" data-name="Comfort Sofa Bed" data-price="₹399"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Comfort Sofa Bed', '₹399', 'Convert your sofa into a bed.')">
+
+                    <img src="Images/Sofa Bed/1.jpeg" alt="Comfort Sofa Bed">
                     <h3>Comfort Sofa Bed</h3>
-                    <p class="price">$399</p>
+                    <p>Convert your sofa into a bed.</p>
+                    <p class="price">&#8377;2399</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Comfort Sofa Bed','$399','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Comfort Sofa Bed', '$399', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Comfort Sofa Bed','₹399','Images/Sofa Bed/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Comfort Sofa Bed', '₹399', 'Images/Sofa Bed/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Dining Table -->
-                <div class="product-card" data-category="dining-table" data-name="Round Dining Table" data-price="$599" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" onclick="openModal('Round Dining Table', '$599', 'Elegant dining table for family meals.')">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" alt="Round Dining Table">
+                <div class="product-card" data-category="dining-table" data-name="Round Dining Table" data-price="₹599"
+                    data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80"
+                    onclick="openModal('Round Dining Table', '₹599', 'Elegant dining table for family meals.')">
+
+                    <img src="Images/Dining table/5.jpeg" alt="Round Dining Table">
                     <h3>Round Dining Table</h3>
-                    <p class="price">$599</p>
+                    <p>Elegant dining table for family meals.</p>
+                    <p class="price">&#8377;1799</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Round Dining Table','$599','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Round Dining Table', '$599', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Round Dining Table','₹599','Images/Dining table/5.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Round Dining Table', '₹599', 'Images/Dining table/5.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Hanging Chair -->
-                <div class="product-card" data-category="hanging-chair" data-name="Swing Hanging Chair" data-price="$299" data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Swing Hanging Chair', '$299', 'Relax in style with this hanging chair.')">
-                    <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Swing Hanging Chair">
+                <div class="product-card" data-category="hanging-chair" data-name="Swing Hanging Chair"
+                    data-price="₹299"
+                    data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Swing Hanging Chair', '₹299', 'Relax in style with this hanging chair.')">
+
+                    <img src="Images/Hanging chair/2.jpeg" alt="Swing Hanging Chair">
                     <h3>Swing Hanging Chair</h3>
-                    <p class="price">$299</p>
+                    <p>Relax in style with this hanging chair.</p>
+                    <p class="price">&#8377;578</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Swing Hanging Chair','$299','https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Swing Hanging Chair', '$299', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Swing Hanging Chair','₹299','Images/Hanging chair/2.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Swing Hanging Chair', '₹299', 'Images/Hanging chair/2.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Wall Shelves -->
-                <div class="product-card" data-category="wall-shelves" data-name="Decorative Wall Shelves" data-price="$99" data-image="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" onclick="openModal('Decorative Wall Shelves', '$99', 'Add style to your walls.')">
-                    <img src="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" alt="Decorative Wall Shelves">
+                <div class="product-card" data-category="wall-shelves" data-name="Decorative Wall Shelves"
+                    data-price="₹99"
+                    data-image="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D"
+                    onclick="openModal('Decorative Wall Shelves', '₹99', 'Add style to your walls.')">
+
+                    <img src="Images/Wall shelves/1.jpeg" alt="Decorative Wall Shelves">
                     <h3>Decorative Wall Shelves</h3>
-                    <p class="price">$99</p>
+                    <p>Add style to your walls.</p>
+                    <p class="price">&#8377;786</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Decorative Wall Shelves','$99','https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Decorative Wall Shelves', '$99', 'https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Decorative Wall Shelves','₹99','Images/Wall shelves/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Decorative Wall Shelves', '₹99', 'Images/Wall shelves/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Ottoman Storage -->
-                <div class="product-card" data-category="ottoman-storage" data-name="Storage Ottoman" data-price="$149" data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Storage Ottoman', '$149', 'Ottoman with hidden storage.')">
-                    <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Storage Ottoman">
+                <div class="product-card" data-category="ottoman-storage" data-name="Storage Ottoman" data-price="₹149"
+                    data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Storage Ottoman', '₹149', 'Ottoman with hidden storage.')">
+
+                    <img src="Images/Ottoman storage/1.jpg" alt="Storage Ottoman">
                     <h3>Storage Ottoman</h3>
-                    <p class="price">$149</p>
+                    <p>Ottoman with hidden storage.</p>
+                    <p class="price">&#8377;1149</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Storage Ottoman','$149','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Storage Ottoman', '$149', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Storage Ottoman','₹149','Images/Ottoman storage/1.jpg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Storage Ottoman', '₹149', 'Images/Ottoman storage/1.jpg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Accent Chair -->
-                <div class="product-card" data-category="accent-chair" data-name="Accent Chair" data-price="$249" data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Accent Chair', '$249', 'Add color to your room.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Accent Chair">
+                <div class="product-card" data-category="accent-chair" data-name="Accent Chair" data-price="₹249"
+                    data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Accent Chair', '₹249', 'Add color to your room.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Accent chair/1.jpeg" alt="Accent Chair">
                     <h3>Accent Chair</h3>
-                    <p class="price">$249</p>
+                    <p>Add color to your room.</p>
+                    <p class="price">&#8377;349</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Accent Chair','$249','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Accent Chair', '$249', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Accent Chair','₹249','Images/Accent chair/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Accent Chair', '₹249', 'Images/Accent chair/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
                 <!-- Additional Products -->
-                <div class="product-card" data-category="recliner-chair" data-name="Executive Recliner Chair" data-price="$599" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" onclick="openModal('Executive Recliner Chair', '$599', 'Premium leather recliner for executives.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" alt="Executive Recliner Chair">
+                <div class="product-card" data-category="recliner-chair" data-name="Executive Recliner Chair"
+                    data-price="₹599"
+                    data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80"
+                    onclick="openModal('Executive Recliner Chair', '₹599', 'Premium leather recliner for executives.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
+
+                    <img src="Images/Recliner chair/3.jpeg" alt="Executive Recliner Chair">
                     <h3>Executive Recliner Chair</h3>
-                    <p class="price">$599</p>
+                    <p>Premium leather recliner for executives.</p>
+                    <p class="price">&#8377;784</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Executive Recliner Chair','$599','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Executive Recliner Chair', '$599', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Executive Recliner Chair','₹599','Images/Recliner chair/3.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Executive Recliner Chair', '₹599', 'Images/Recliner chair/3.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="coffee-table" data-name="Glass Coffee Table" data-price="$299" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Glass Coffee Table', '$299', 'Elegant glass top coffee table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Glass Coffee Table">
-                    <h3>Glass Coffee Table</h3>
-                    <p class="price">$299</p>
+                <div class="product-card" data-category="coffee-table" data-name="Glass Coffee Table" data-price="₹299"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Glass Coffee Table', '₹299', 'Elegant glass top coffee table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Coffee table/3.jpeg" alt="Glass Coffee Table">
+                    <h3>Wooden Coffee Table</h3>
+                    <p>Elegant glass top coffee table.</p>
+                    <p class="price">&#8377;499</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Glass Coffee Table','$299','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Glass Coffee Table', '$299', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Glass Coffee Table','₹299','Images/Coffee table/3.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Glass Coffee Table', '₹299', 'Images/Coffee table/3.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="bookshelf" data-name="Corner Bookshelf" data-price="$399" data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Corner Bookshelf', '$399', 'Space-saving corner bookshelf.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Corner Bookshelf">
+                <div class="product-card" data-category="bookshelf" data-name="Corner Bookshelf" data-price="₹399"
+                    data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Corner Bookshelf', '₹399', 'Space-saving corner bookshelf.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/BookShelf/3.jpeg" alt="Corner Bookshelf">
                     <h3>Corner Bookshelf</h3>
-                    <p class="price">$399</p>
+                    <p>Space-saving corner bookshelf.</p>
+                    <p class="price">&#8377;699</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Corner Bookshelf','$399','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Corner Bookshelf', '$399', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Corner Bookshelf','₹399','Images/BookShelf/3.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Corner Bookshelf', '₹399', 'Images/BookShelf/3.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="end-table" data-name="Round End Table" data-price="$179" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Round End Table', '$179', 'Compact round end table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Round End Table">
-                    <h3>Round End Table</h3>
-                    <p class="price">$179</p>
+                <div class="product-card" data-category="end-table" data-name="Round End Table" data-price="₹179"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Round End Table', '₹179', 'Compact round end table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/End table/4.jpeg" alt="Round End Table">
+                    <h3>Modern End Table</h3>
+                    <p>Compact round end table.</p>
+                    <p class="price">&#8377;979</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Round End Table','$179','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Round End Table', '$179', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Round End Table','₹179','Images/End table/4.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Round End Table', '₹179', 'Images/End table/4.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="sofa-bed" data-name="Compact Sofa Bed" data-price="$449" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Compact Sofa Bed', '$449', 'Foldable sofa bed for small spaces.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Compact Sofa Bed">
+                <div class="product-card" data-category="sofa-bed" data-name="Compact Sofa Bed" data-price="₹449"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Compact Sofa Bed', '₹449', 'Foldable sofa bed for small spaces.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
+
+                    <img src="Images/Sofa Bed/3.jpeg" alt="Compact Sofa Bed">
                     <h3>Compact Sofa Bed</h3>
-                    <p class="price">$449</p>
+                    <p>Foldable sofa bed for small spaces.</p>
+                    <p class="price">&#8377;3449</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Compact Sofa Bed','$449','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Compact Sofa Bed', '$449', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Compact Sofa Bed','₹449','Images/Sofa Bed/3.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Compact Sofa Bed', '₹449', 'Images/Sofa Bed/3.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <!-- Additional 15 Products -->
-                <div class="product-card" data-category="recliner-chair" data-name="Leather Recliner Chair" data-price="$699" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" onclick="openModal('Leather Recliner Chair', '$699', 'Premium leather recliner.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" alt="Leather Recliner Chair">
+                <!-- Additional Products -->
+                <div class="product-card" data-category="recliner-chair" data-name="Leather Recliner Chair"
+                    data-price="₹699"
+                    data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80"
+                    onclick="openModal('Leather Recliner Chair', '₹699', 'Premium leather recliner.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
+
+                    <img src="Images/pexels-esteban-santiago-gonzalez-239179106-12269764.jpg"
+                        alt="Leather Recliner Chair">
                     <h3>Leather Recliner Chair</h3>
-                    <p class="price">$699</p>
+                    <p>Premium leather recliner.</p>
+                    <p class="price">&#8377;699</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Leather Recliner Chair','$699','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Leather Recliner Chair', '$699', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Leather Recliner Chair','₹699','Images/Recliner chair/1.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Leather Recliner Chair', '₹699', 'Images/Recliner chair/1.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="coffee-table" data-name="Marble Coffee Table" data-price="$349" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Marble Coffee Table', '$349', 'Elegant marble top.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marble Coffee Table">
+                <div class="product-card" data-category="coffee-table" data-name="Marble Coffee Table" data-price="₹349"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Marble Coffee Table', '₹349', 'Elegant marble top.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Coffee table/4.jpeg" alt="Marble Coffee Table">
                     <h3>Marble Coffee Table</h3>
-                    <p class="price">$349</p>
+                    <p>Elegant marble top.</p>
+                    <p class="price">&#8377;649</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Marble Coffee Table','$349','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Marble Coffee Table', '$349', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Marble Coffee Table','₹349','Images/Coffee table/4.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Marble Coffee Table', '₹349', 'Images/Coffee table/4.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="bookshelf" data-name="Industrial Bookshelf" data-price="$279" data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Industrial Bookshelf', '$279', 'Industrial style bookshelf.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Industrial Bookshelf">
+                <div class="product-card" data-category="bookshelf" data-name="Industrial Bookshelf" data-price="₹279"
+                    data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Industrial Bookshelf', '₹279', 'Industrial style bookshelf.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/BookShelf/4.jpeg" alt="Industrial Bookshelf">
                     <h3>Industrial Bookshelf</h3>
-                    <p class="price">$279</p>
+                    <p>Industrial style bookshelf.</p>
+                    <p class="price">&#8377;379</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Industrial Bookshelf','$279','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Industrial Bookshelf', '$279', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Industrial Bookshelf','₹279','Images/BookShelf/4.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Industrial Bookshelf', '₹279', 'Images/BookShelf/4.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="end-table" data-name="Metal End Table" data-price="$129" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Metal End Table', '$129', 'Modern metal end table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Metal End Table">
-                    <h3>Metal End Table</h3>
-                    <p class="price">$129</p>
+                <div class="product-card" data-category="end-table" data-name="Metal End Table" data-price="₹129"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Metal End Table', '₹129', 'Modern metal end table.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/End table/2.jpeg" alt="Metal End Table">
+                    <h3>Exclusive End Table</h3>
+                    <p>Modern metal end table.</p>
+                    <p class="price">&#8377;629</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Metal End Table','$129','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Metal End Table', '$129', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Metal End Table','₹129','Images/End table/2.jpeg')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Metal End Table', '₹129', 'Images/End table/2.jpeg')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="sofa-bed" data-name="Convertible Sofa Bed" data-price="$499" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Convertible Sofa Bed', '$499', 'Easy to convert sofa bed.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Convertible Sofa Bed">
+                <div class="product-card" data-category="sofa-bed" data-name="Convertible Sofa Bed" data-price="₹499"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Convertible Sofa Bed', '₹499', 'Easy to convert sofa bed.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
+
+                    <img src="Images/Sofa Bed/5.jpeg" alt="Convertible Sofa Bed">
                     <h3>Convertible Sofa Bed</h3>
-                    <p class="price">$499</p>
+                    <p>Easy to convert sofa bed.</p>
+                    <p class="price">&#8377;2499</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Convertible Sofa Bed','$499','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Convertible Sofa Bed', '$499', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Convertible Sofa Bed','₹499','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Convertible Sofa Bed', '₹499', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="dining-table" data-name="Rectangular Dining Table" data-price="$799" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" onclick="openModal('Rectangular Dining Table', '$799', 'Large rectangular dining table.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80" alt="Rectangular Dining Table">
+                <div class="product-card" data-category="dining-table" data-name="Rectangular Dining Table"
+                    data-price="₹799"
+                    data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80"
+                    onclick="openModal('Rectangular Dining Table', '₹799', 'Large rectangular dining table.', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')">
+
+                    <img src="Images/Dining table/3.jpeg" alt="Rectangular Dining Table">
                     <h3>Rectangular Dining Table</h3>
-                    <p class="price">$799</p>
+                    <p>Large rectangular dining table.</p>
+                    <p class="price">&#8377;799</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Rectangular Dining Table','$799','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Rectangular Dining Table', '$799', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Rectangular Dining Table','₹799','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Rectangular Dining Table', '₹799', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1958&q=80')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="hanging-chair" data-name="Egg Hanging Chair" data-price="$349" data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Egg Hanging Chair', '$349', 'Comfortable egg-shaped hanging chair.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Egg Hanging Chair">
+                <div class="product-card" data-category="hanging-chair" data-name="Egg Hanging Chair" data-price="₹349"
+                    data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Egg Hanging Chair', '₹349', 'Comfortable egg-shaped hanging chair.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Hanging chair/3.jpeg" alt="Egg Hanging Chair">
                     <h3>Egg Hanging Chair</h3>
-                    <p class="price">$349</p>
+                    <p>Comfortable egg-shaped hanging chair.</p>
+                    <p class="price">&#8377;449</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Egg Hanging Chair','$349','https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Egg Hanging Chair', '$349', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Egg Hanging Chair','₹349','https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Egg Hanging Chair', '₹349', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="wall-shelves" data-name="Floating Wall Shelves" data-price="$89" data-image="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" onclick="openModal('Floating Wall Shelves', '$89', 'Minimalist floating shelves.', 'https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')">
-                    <img src="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D" alt="Floating Wall Shelves">
+                <div class="product-card" data-category="wall-shelves" data-name="Floating Wall Shelves"
+                    data-price="₹89"
+                    data-image="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D"
+                    onclick="openModal('Floating Wall Shelves', '₹89', 'Minimalist floating shelves.', 'https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')">
+
+                    <img src="Images/Wall shelves/3.jpeg" alt="Floating Wall Shelves">
                     <h3>Floating Wall Shelves</h3>
-                    <p class="price">$89</p>
+                    <p>Minimalist floating shelves.</p>
+                    <p class="price">&#8377;789</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Floating Wall Shelves','$89','https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Floating Wall Shelves', '$89', 'https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Floating Wall Shelves','₹89','https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Floating Wall Shelves', '₹89', 'https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2FsbCUyMHNoZWx2ZXN8ZW58MHx8MHx8fDA%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="ottoman-storage" data-name="Bench Ottoman" data-price="$199" data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Bench Ottoman', '$199', 'Storage bench ottoman.', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bench Ottoman">
+                <div class="product-card" data-category="ottoman-storage" data-name="Bench Ottoman" data-price="₹199"
+                    data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Bench Ottoman', '₹199', 'Storage bench ottoman.', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Ottoman storage/2.jpg"
+                        alt="Bench Ottoman">
                     <h3>Bench Ottoman</h3>
-                    <p class="price">$199</p>
+                    <p>Storage bench ottoman.</p>
+                    <p class="price">&#8377;599</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Bench Ottoman','$199','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Bench Ottoman', '$199', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Bench Ottoman','₹199','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Bench Ottoman', '₹199', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="accent-chair" data-name="Velvet Accent Chair" data-price="$299" data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Velvet Accent Chair', '$299', 'Soft velvet accent chair.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Velvet Accent Chair">
+                <div class="product-card" data-category="accent-chair" data-name="Velvet Accent Chair" data-price="₹299"
+                    data-image="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Velvet Accent Chair', '₹299', 'Soft velvet accent chair.', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Accent chair/2.jpeg" alt="Velvet Accent Chair">
                     <h3>Velvet Accent Chair</h3>
-                    <p class="price">$299</p>
+                    <p>Soft velvet accent chair.</p>
+                    <p class="price">&#8377;650</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Velvet Accent Chair','$299','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Velvet Accent Chair', '$299', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Velvet Accent Chair','₹299','https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Velvet Accent Chair', '₹299', 'https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="recliner-chair" data-name="Massage Recliner Chair" data-price="$899" data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Massage Recliner Chair', '$899', 'Recliner with massage function.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Massage Recliner Chair">
-                    <h3>Massage Recliner Chair</h3>
-                    <p class="price">$899</p>
+                <div class="product-card" data-category="recliner-chair" data-name="Massage Recliner Chair"
+                    data-price="₹899"
+                    data-image="https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Massage Recliner Chair', '₹899', 'Recliner with massage function.', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Recliner chair/6.jpeg" alt="Massage Recliner Chair">
+                    <h3>Comfortable Recliner Chair</h3>
+                    <p>Recliner with massage function.</p>
+                    <p class="price">&#8377;879</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Massage Recliner Chair','$899','https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Massage Recliner Chair', '$899', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Massage Recliner Chair','₹899','https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Massage Recliner Chair', '₹899', 'https://images.unsplash.com/photo-1664560724581-e3b068a0a376?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="coffee-table" data-name="Lift Top Coffee Table" data-price="$399" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Lift Top Coffee Table', '$399', 'Lift top for extra storage.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Lift Top Coffee Table">
+                <div class="product-card" data-category="coffee-table" data-name="Lift Top Coffee Table"
+                    data-price="₹399"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Lift Top Coffee Table', '₹399', 'Lift top for extra storage.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
+
+                    <img src="Images/Coffee table/5.jpeg" alt="Lift Top Coffee Table">
                     <h3>Lift Top Coffee Table</h3>
-                    <p class="price">$399</p>
+                    <p>Lift top for extra storage.</p>
+                    <p class="price">&#8377;999</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Lift Top Coffee Table','$399','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Lift Top Coffee Table', '$399', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Lift Top Coffee Table','₹399','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Lift Top Coffee Table', '₹399', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="bookshelf" data-name="Ladder Bookshelf" data-price="$249" data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Ladder Bookshelf', '$249', 'Ladder style bookshelf.', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ladder Bookshelf">
+                <div class="product-card" data-category="bookshelf" data-name="Ladder Bookshelf" data-price="₹249"
+                    data-image="https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Ladder Bookshelf', '₹249', 'Ladder style bookshelf.', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/Wall shelves/4.jpeg" alt="Ladder Bookshelf">
                     <h3>Ladder Bookshelf</h3>
-                    <p class="price">$249</p>
+                    <p>Ladder style bookshelf.</p>
+                    <p class="price">&#8377;1249</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Ladder Bookshelf','$249','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Ladder Bookshelf', '$249', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Ladder Bookshelf','₹249','https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Ladder Bookshelf', '₹249', 'https://images.unsplash.com/photo-1762280237536-90b449615e8e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="end-table" data-name="Nesting End Tables" data-price="$159" data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="openModal('Nesting End Tables', '$159', 'Set of nesting tables.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                    <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nesting End Tables">
+                <div class="product-card" data-category="end-table" data-name="Nesting End Tables" data-price="₹159"
+                    data-image="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    onclick="openModal('Nesting End Tables', '₹159', 'Set of nesting tables.', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+
+                    <img src="Images/End table/3.jpeg" alt="Nesting End Tables">
                     <h3>Nesting End Tables</h3>
-                    <p class="price">$159</p>
+                    <p>Set of nesting tables.</p>
+                    <p class="price">&#8377;1159</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Nesting End Tables','$159','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Nesting End Tables', '$159', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Nesting End Tables','₹159','https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Nesting End Tables', '₹159', 'https://images.unsplash.com/photo-1594000311835-6d564e5a46b3?q=80&w=411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="sofa-bed" data-name="Futon Sofa Bed" data-price="$349" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" onclick="openModal('Futon Sofa Bed', '$349', 'Traditional futon sofa bed.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Futon Sofa Bed">
+                <div class="product-card" data-category="sofa-bed" data-name="Futon Sofa Bed" data-price="₹349"
+                    data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    onclick="openModal('Futon Sofa Bed', '₹349', 'Traditional futon sofa bed.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')">
+
+                    <img src="Images/Sofa Bed/4.jpeg" alt="Futon Sofa Bed">
                     <h3>Futon Sofa Bed</h3>
-                    <p class="price">$349</p>
+                    <p>Traditional futon sofa bed.</p>
+                    <p class="price">&#8377;949</p>
                     <div class="product-actions">
-                        <button class="icon-btn" onclick="event.stopPropagation(); toggleWishlist(this,'Futon Sofa Bed','$349','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-heart"></i></button>
-                        <button class="icon-btn" onclick="event.stopPropagation(); addToCart('Futon Sofa Bed', '$349', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); toggleWishlist(this,'Futon Sofa Bed','₹349','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-heart"></i></button>
+                        <button class="icon-btn"
+                            onclick="event.stopPropagation(); addToCart('Futon Sofa Bed', '₹349', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"><i
+                                class="fas fa-shopping-cart"></i></button>
+
 
                         <button class="buy-btn">Buy Now</button>
                     </div>
@@ -448,7 +766,7 @@
                 <div class="modal-actions">
                     <button class="icon-btn" id="modalWishlistBtn" onclick="toggleModalWishlist()"><i class="fas fa-heart"></i></button>
                     <button class="icon-btn" id="modalCartBtn" onclick="addToCartFromModal()"><i class="fas fa-shopping-cart"></i></button> -->
-                    <!-- <button class="buy-btn" onclick="buyNowFromModal()">Buy Now</button>
+        <!-- <button class="buy-btn" onclick="buyNowFromModal()">Buy Now</button>
                 </div>
                 <div class="rating">
                     <h3>Rate this product:</h3>
@@ -471,441 +789,572 @@
         </div>
 
     </main> -->
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
-
-        // Search functionality
-        function searchProducts() {
-            const searchInput = document.getElementById('searchInput');
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            const products = document.querySelectorAll('.product-card');
-            const noResults = document.getElementById('noResults');
-            const productsGrid = document.getElementById('productsGrid');
-            
-            let visibleCount = 0;
-            
-            products.forEach(product => {
-                const productName = product.getAttribute('data-name').toLowerCase();
-                const productCategory = product.getAttribute('data-category').toLowerCase();
-                
-                if (productName.includes(searchTerm) || productCategory.includes(searchTerm)) {
-                    product.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-            
-            // Show/hide no results message
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-                productsGrid.style.display = 'none';
-            } else {
-                noResults.style.display = 'none';
-                productsGrid.style.display = 'grid';
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('active');
             }
-        }
 
-        function clearSearch() {
-            const searchInput = document.getElementById('searchInput');
-            searchInput.value = '';
-            searchProducts();
-            // Show all products
-            const products = document.querySelectorAll('.product-card');
-            const noResults = document.getElementById('noResults');
-            const productsGrid = document.getElementById('productsGrid');
-            
-            products.forEach(product => {
-                product.style.display = 'block';
-            });
-            
-            noResults.style.display = 'none';
-            productsGrid.style.display = 'grid';
-        }
-
-        // Handle Enter key press in search input
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchProducts();
+            // Check if user is logged in
+            function isUserLoggedIn() {
+                const userAccount = localStorage.getItem('userAccount');
+                return userAccount !== null;
             }
-        });
 
-        // Check for search query parameter on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const searchQuery = urlParams.get('search');
-            
-            if (searchQuery) {
-                document.getElementById('searchInput').value = searchQuery;
-                searchProducts();
+            // Redirect to profile page for login
+            function redirectToLogin() {
+                alert('Please create an account or log in to continue.');
+                window.location.href = 'profile.html';
             }
-        });
-
-        function filterProducts(category) {
-            const products = document.querySelectorAll('.product-card');
-            const noResults = document.getElementById('noResults');
-            const productsGrid = document.getElementById('productsGrid');
-            let visibleCount = 0;
-            
-            products.forEach(product => {
-                if (category === 'all' || product.getAttribute('data-category') === category) {
-                    product.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-            
-            // Show/hide no results message
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-                productsGrid.style.display = 'none';
-            } else {
-                noResults.style.display = 'none';
-                productsGrid.style.display = 'grid';
-            }
-        }
-
-        function filterByProductName(name) {
-            const products = document.querySelectorAll('.product-card');
-            const noResults = document.getElementById('noResults');
-            const productsGrid = document.getElementById('productsGrid');
-            let visibleCount = 0;
-            
-            products.forEach(product => {
-                const productName = product.getAttribute('data-name');
-                if (productName === name) {
-                    product.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-            
-            // Show/hide no results message
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-                productsGrid.style.display = 'none';
-            } else {
-                noResults.style.display = 'none';
-                productsGrid.style.display = 'grid';
-            }
-            
-            // Close sidebar after selection
-            toggleSidebar();
-        }
 
 
-        // Modal data storage
-        let currentModalProduct = {};
+            // Search functionality
+            function searchProducts() {
+                const searchInput = document.getElementById('searchInput');
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const products = document.querySelectorAll('.product-card');
+                const noResults = document.getElementById('noResults');
+                const productsGrid = document.getElementById('productsGrid');
 
-        function openModal(name, price, description, imageSrc) {
-            currentModalProduct = { name, price, description, image: imageSrc };
-            document.getElementById('modalTitle').textContent = name;
-            document.getElementById('modalPrice').textContent = price;
-            document.getElementById('modalDescription').textContent = description;
-            document.getElementById('modalImage').src = imageSrc;
-            
-            // Reset rating stars
-            const stars = document.querySelectorAll('#modalStars i');
-            stars.forEach(star => star.classList.remove('active'));
-            document.getElementById('ratingText').textContent = 'Click a star to rate';
-            
-            // Update wishlist button state
-            updateModalWishlistState();
-            
-            // Load rating for this product
-            loadRating();
-            
-            // Load reviews for this product
-            loadReviews(name);
-            
-            document.getElementById('productModal').style.display = 'block';
+                let visibleCount = 0;
 
-        }
+                products.forEach(product => {
+                    const productName = product.getAttribute('data-name').toLowerCase();
+                    const productCategory = product.getAttribute('data-category').toLowerCase();
 
-
-        function closeModal() {
-            document.getElementById('productModal').style.display = 'none';
-        }
-
-        function rateProduct(rating) {
-            const stars = document.querySelectorAll('#modalStars i');
-            stars.forEach((star, index) => {
-                if (index < rating) {
-                    star.classList.add('active');
-                } else {
-                    star.classList.remove('active');
-                }
-            });
-            document.getElementById('ratingText').textContent = `You rated this ${rating} star${rating > 1 ? 's' : ''}!`;
-            
-            // Save rating to localStorage
-            const ratings = JSON.parse(localStorage.getItem('productRatings') || '{}');
-            ratings[currentModalProduct.name] = rating;
-            localStorage.setItem('productRatings', JSON.stringify(ratings));
-        }
-
-        function loadRating() {
-            const ratings = JSON.parse(localStorage.getItem('productRatings') || '{}');
-            const savedRating = ratings[currentModalProduct.name];
-            if (savedRating) {
-                rateProduct(savedRating);
-            }
-        }
-
-        // Cart functionality
-        function getCart() {
-            const cart = localStorage.getItem('cart');
-            return cart ? JSON.parse(cart) : [];
-        }
-
-        function saveCart(cart) {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        // Add to cart from product card
-        function addToCart(name, price, image) {
-            let cart = getCart();
-            const existingItem = cart.find(item => item.name === name);
-            
-            if (existingItem) {
-                existingItem.quantity = (existingItem.quantity || 1) + 1;
-            } else {
-                cart.push({
-                    name: name,
-                    price: price,
-                    image: image,
-                    quantity: 1
+                    if (productName.includes(searchTerm) || productCategory.includes(searchTerm)) {
+                        product.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
                 });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                    productsGrid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    productsGrid.style.display = 'grid';
+                }
             }
-            
-            saveCart(cart);
-            alert(name + ' added to cart!');
-        }
 
-        function addToCartFromModal() {
+            function clearSearch() {
+                const searchInput = document.getElementById('searchInput');
+                searchInput.value = '';
+                searchProducts();
+                // Show all products
+                const products = document.querySelectorAll('.product-card');
+                const noResults = document.getElementById('noResults');
+                const productsGrid = document.getElementById('productsGrid');
 
-            const cart = getCart();
-            const existingIndex = cart.findIndex(item => item.name === currentModalProduct.name);
-            
-            if (existingIndex > -1) {
-                cart[existingIndex].quantity += 1;
-            } else {
-                cart.push({ 
-                    name: currentModalProduct.name, 
-                    price: currentModalProduct.price, 
-                    image: currentModalProduct.image,
-                    quantity: 1 
+                products.forEach(product => {
+                    product.style.display = 'block';
                 });
+
+                noResults.style.display = 'none';
+                productsGrid.style.display = 'grid';
             }
-            saveCart(cart);
-            alert(currentModalProduct.name + ' added to cart!');
-        }
 
-        function buyNowFromModal() {
-            buyNow(currentModalProduct.name, currentModalProduct.price, currentModalProduct.image);
-        }
+            // Handle Enter key press in search input
+            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    searchProducts();
+                }
+            });
 
-        // Buy Now functionality - adds directly to order history
-        function buyNow(name, price, image) {
-            if (confirm(`Are you sure you want to buy ${name} for ${price}?\n\nThis will place an order immediately.`)) {
-                // Get existing orders or initialize empty array
-                let orders = JSON.parse(localStorage.getItem('orders')) || [];
-                
-                // Generate order ID
-                const orderId = 'ORD-' + String(orders.length + 1).padStart(3, '0');
-                
-                // Create new order
-                const newOrder = {
-                    id: orderId,
-                    date: new Date().toISOString().split('T')[0],
-                    items: [name],
-                    total: price,
-                    status: 'Processing',
-                    image: image
+            // Check for search query parameter on page load
+            document.addEventListener('DOMContentLoaded', function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get('search');
+
+                if (searchQuery) {
+                    document.getElementById('searchInput').value = searchQuery;
+                    searchProducts();
+                }
+            });
+
+            function filterProducts(category) {
+                const products = document.querySelectorAll('.product-card');
+                const noResults = document.getElementById('noResults');
+                const productsGrid = document.getElementById('productsGrid');
+                let visibleCount = 0;
+
+                products.forEach(product => {
+                    if (category === 'all' || product.getAttribute('data-category') === category) {
+                        product.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                    productsGrid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    productsGrid.style.display = 'grid';
+                }
+            }
+
+            function filterByProductName(name) {
+                const products = document.querySelectorAll('.product-card');
+                const noResults = document.getElementById('noResults');
+                const productsGrid = document.getElementById('productsGrid');
+                let visibleCount = 0;
+
+                products.forEach(product => {
+                    const productName = product.getAttribute('data-name');
+                    if (productName === name) {
+                        product.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                    productsGrid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    productsGrid.style.display = 'grid';
+                }
+
+                // Close sidebar after selection
+                toggleSidebar();
+            }
+
+
+            // Modal data storage
+            let currentModalProduct = {};
+
+            function openModal(name, price, description, imageSrc) {
+                currentModalProduct = { name, price, description, image: imageSrc };
+                document.getElementById('modalTitle').textContent = name;
+                document.getElementById('modalPrice').textContent = price;
+                document.getElementById('modalDescription').textContent = description;
+                document.getElementById('modalImage').src = imageSrc;
+
+                // Reset rating stars
+                const stars = document.querySelectorAll('#modalStars i');
+                stars.forEach(star => star.classList.remove('active'));
+                document.getElementById('ratingText').textContent = 'Click a star to rate';
+
+                // Update wishlist button state
+                updateModalWishlistState();
+
+                // Load rating for this product
+                loadRating();
+
+                // Load reviews for this product
+                loadReviews(name);
+
+                document.getElementById('productModal').style.display = 'block';
+
+            }
+
+
+            function closeModal() {
+                document.getElementById('productModal').style.display = 'none';
+            }
+
+            function rateProduct(rating) {
+                const stars = document.querySelectorAll('#modalStars i');
+                stars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.classList.add('active');
+                    } else {
+                        star.classList.remove('active');
+                    }
+                });
+                document.getElementById('ratingText').textContent = `You rated this ${rating} star${rating > 1 ? 's' : ''}!`;
+
+                // Save rating to localStorage
+                const ratings = JSON.parse(localStorage.getItem('productRatings') || '{}');
+                ratings[currentModalProduct.name] = rating;
+                localStorage.setItem('productRatings', JSON.stringify(ratings));
+            }
+
+            function loadRating() {
+                const ratings = JSON.parse(localStorage.getItem('productRatings') || '{}');
+                const savedRating = ratings[currentModalProduct.name];
+                if (savedRating) {
+                    rateProduct(savedRating);
+                }
+            }
+
+            // Cart functionality
+            function getCart() {
+                const cart = localStorage.getItem('cart');
+                return cart ? JSON.parse(cart) : [];
+            }
+
+            function saveCart(cart) {
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            // Add to cart from product card
+            function addToCart(name, price, image) {
+                if (!isUserLoggedIn()) {
+                    redirectToLogin();
+                    return;
+                }
+
+                let cart = getCart();
+                const existingItem = cart.find(item => item.name === name);
+
+                if (existingItem) {
+                    existingItem.quantity = (existingItem.quantity || 1) + 1;
+                } else {
+                    cart.push({
+                        name: name,
+                        price: price,
+                        image: image,
+                        quantity: 1
+                    });
+                }
+
+                saveCart(cart);
+                alert(name + ' added to cart!');
+            }
+
+
+            function addToCartFromModal() {
+                if (!isUserLoggedIn()) {
+                    redirectToLogin();
+                    return;
+                }
+
+                const cart = getCart();
+                const existingIndex = cart.findIndex(item => item.name === currentModalProduct.name);
+
+                if (existingIndex > -1) {
+                    cart[existingIndex].quantity += 1;
+                } else {
+                    cart.push({
+                        name: currentModalProduct.name,
+                        price: currentModalProduct.price,
+                        image: currentModalProduct.image,
+                        quantity: 1
+                    });
+                }
+                saveCart(cart);
+                alert(currentModalProduct.name + ' added to cart!');
+            }
+
+
+            function buyNowFromModal() {
+                buyNow(currentModalProduct.name, currentModalProduct.price, currentModalProduct.image);
+            }
+
+            // Buy Now functionality - adds directly to order history
+            function buyNow(name, price, image) {
+                if (!isUserLoggedIn()) {
+                    redirectToLogin();
+                    return;
+                }
+
+                if (confirm(`Are you sure you want to buy ${name} for ${price}?\n\nThis will place an order immediately.`)) {
+                    // Get existing orders or initialize empty array
+                    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+                    // Generate order ID
+                    const orderId = 'ORD-' + String(orders.length + 1).padStart(3, '0');
+
+                    // Create new order
+                    const newOrder = {
+                        id: orderId,
+                        date: new Date().toISOString().split('T')[0],
+                        items: [name],
+                        total: price,
+                        status: 'Processing',
+                        image: image
+                    };
+
+                    // Add to orders
+                    orders.push(newOrder);
+
+                    // Save to localStorage
+                    localStorage.setItem('orders', JSON.stringify(orders));
+
+                    // Show success message
+                    alert(`Order placed successfully!\n\nOrder ID: ${orderId}\nProduct: ${name}\nTotal: ${price}\n\nYou can view your order in the Profile page.`);
+
+                    // Optionally redirect to profile page
+                    if (confirm('Would you like to view your order history?')) {
+                        window.location.href = 'profile.html';
+                    }
+                }
+            }
+
+
+
+            // Modal wishlist functionality
+            function toggleModalWishlist() {
+                if (!isUserLoggedIn()) {
+                    redirectToLogin();
+                    return;
+                }
+
+                const wishlist = getWishlist();
+                const existingIndex = wishlist.findIndex(item => item.name === currentModalProduct.name);
+                const btn = document.getElementById('modalWishlistBtn');
+
+                if (existingIndex > -1) {
+                    wishlist.splice(existingIndex, 1);
+                    btn.classList.remove('wishlisted');
+                    alert(currentModalProduct.name + ' removed from wishlist.');
+                } else {
+                    wishlist.push({
+                        name: currentModalProduct.name,
+                        price: currentModalProduct.price,
+                        image: currentModalProduct.image
+                    });
+                    btn.classList.add('wishlisted');
+                    alert(currentModalProduct.name + ' added to wishlist!');
+                }
+                saveWishlist(wishlist);
+            }
+
+
+            function updateModalWishlistState() {
+                const wishlist = getWishlist();
+                const btn = document.getElementById('modalWishlistBtn');
+                const isInWishlist = wishlist.some(item => item.name === currentModalProduct.name);
+
+                if (isInWishlist) {
+                    btn.classList.add('wishlisted');
+                } else {
+                    btn.classList.remove('wishlisted');
+                }
+            }
+
+            // Reviews functionality
+            function getReviews(productName) {
+                const allReviews = JSON.parse(localStorage.getItem('productReviews') || '{}');
+                return allReviews[productName] || [];
+            }
+
+            function saveReview(productName, reviewText) {
+                const allReviews = JSON.parse(localStorage.getItem('productReviews') || '{}');
+                if (!allReviews[productName]) {
+                    allReviews[productName] = [];
+                }
+                const review = {
+                    text: reviewText,
+                    date: new Date().toLocaleDateString(),
+                    user: 'Guest User'
                 };
-                
-                // Add to orders
-                orders.push(newOrder);
-                
-                // Save to localStorage
-                localStorage.setItem('orders', JSON.stringify(orders));
-                
-                // Show success message
-                alert(`Order placed successfully!\n\nOrder ID: ${orderId}\nProduct: ${name}\nTotal: ${price}\n\nYou can view your order in the Profile page.`);
-                
-                // Optionally redirect to profile page
-                if (confirm('Would you like to view your order history?')) {
-                    window.location.href = 'profile.html';
-                }
+                allReviews[productName].push(review);
+                localStorage.setItem('productReviews', JSON.stringify(allReviews));
             }
-        }
 
+            function loadReviews(productName) {
+                const reviewsList = document.getElementById('reviewsList');
+                const reviews = getReviews(productName);
 
-        // Modal wishlist functionality
-        function toggleModalWishlist() {
-            const wishlist = getWishlist();
-            const existingIndex = wishlist.findIndex(item => item.name === currentModalProduct.name);
-            const btn = document.getElementById('modalWishlistBtn');
-            
-            if (existingIndex > -1) {
-                wishlist.splice(existingIndex, 1);
-                btn.classList.remove('wishlisted');
-                alert(currentModalProduct.name + ' removed from wishlist.');
-            } else {
-                wishlist.push({ 
-                    name: currentModalProduct.name, 
-                    price: currentModalProduct.price, 
-                    image: currentModalProduct.image 
-                });
-                btn.classList.add('wishlisted');
-                alert(currentModalProduct.name + ' added to wishlist!');
-            }
-            saveWishlist(wishlist);
-        }
-
-        function updateModalWishlistState() {
-            const wishlist = getWishlist();
-            const btn = document.getElementById('modalWishlistBtn');
-            const isInWishlist = wishlist.some(item => item.name === currentModalProduct.name);
-            
-            if (isInWishlist) {
-                btn.classList.add('wishlisted');
-            } else {
-                btn.classList.remove('wishlisted');
-            }
-        }
-
-        // Reviews functionality
-        function getReviews(productName) {
-            const allReviews = JSON.parse(localStorage.getItem('productReviews') || '{}');
-            return allReviews[productName] || [];
-        }
-
-        function saveReview(productName, reviewText) {
-            const allReviews = JSON.parse(localStorage.getItem('productReviews') || '{}');
-            if (!allReviews[productName]) {
-                allReviews[productName] = [];
-            }
-            const review = {
-                text: reviewText,
-                date: new Date().toLocaleDateString(),
-                user: 'Guest User'
-            };
-            allReviews[productName].push(review);
-            localStorage.setItem('productReviews', JSON.stringify(allReviews));
-        }
-
-        function loadReviews(productName) {
-            const reviewsList = document.getElementById('reviewsList');
-            const reviews = getReviews(productName);
-            
-            if (reviews.length === 0) {
-                reviewsList.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to review!</p>';
-            } else {
-                reviewsList.innerHTML = reviews.map(review => `
+                if (reviews.length === 0) {
+                    reviewsList.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to review!</p>';
+                } else {
+                    reviewsList.innerHTML = reviews.map(review => `
                     <div class="review-item">
                         <p class="review-text">${review.text}</p>
                         <p class="review-meta">By ${review.user} on ${review.date}</p>
                     </div>
                 `).join('');
+                }
             }
-        }
 
-        function submitReview() {
-            const reviewText = document.getElementById('reviewText').value.trim();
-            if (!reviewText) {
-                alert('Please write a review before submitting.');
-                return;
+            function submitReview() {
+                const reviewText = document.getElementById('reviewText').value.trim();
+                if (!reviewText) {
+                    alert('Please write a review before submitting.');
+                    return;
+                }
+
+                saveReview(currentModalProduct.name, reviewText);
+                loadReviews(currentModalProduct.name);
+                document.getElementById('reviewText').value = '';
+                alert('Review submitted successfully!');
             }
-            
-            saveReview(currentModalProduct.name, reviewText);
-            loadReviews(currentModalProduct.name);
-            document.getElementById('reviewText').value = '';
-            alert('Review submitted successfully!');
-        }
 
 
-        window.onclick = function(event) {
-            const modal = document.getElementById('productModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            window.onclick = function (event) {
+                const modal = document.getElementById('productModal');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
             }
-        }
 
-        // Wishlist functionality
-        function getWishlist() {
-            const wishlist = localStorage.getItem('wishlist');
-            return wishlist ? JSON.parse(wishlist) : [];
-        }
-
-        function saveWishlist(wishlist) {
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        }
-
-        function toggleWishlist(button, name, price, image) {
-            let wishlist = getWishlist();
-            const existingIndex = wishlist.findIndex(item => item.name === name);
-            
-            if (existingIndex > -1) {
-                // Item already in wishlist, remove it
-                wishlist.splice(existingIndex, 1);
-                button.classList.remove('wishlisted');
-            } else {
-                // Add to wishlist
-                wishlist.push({ name: name, price: price, image: image });
-                button.classList.add('wishlisted');
+            // Wishlist functionality
+            function getWishlist() {
+                const wishlist = localStorage.getItem('wishlist');
+                return wishlist ? JSON.parse(wishlist) : [];
             }
-            saveWishlist(wishlist);
-            
-            // Show feedback
-            if (button.classList.contains('wishlisted')) {
-                alert(name + ' added to wishlist!');
-            } else {
-                alert(name + ' removed from wishlist.');
-            }
-        }
 
-        // Check wishlist status on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const wishlist = getWishlist();
-            const wishlistButtons = document.querySelectorAll('.product-card .icon-btn');
-            
-            wishlistButtons.forEach(button => {
-                const icon = button.querySelector('i');
-                if (icon && icon.classList.contains('fa-heart')) {
-                    // Get product info from the parent product-card
-                    const productCard = button.closest('.product-card');
-                    if (productCard) {
-                        const name = productCard.getAttribute('data-name');
-                        const isInWishlist = wishlist.some(item => item.name === name);
-                        if (isInWishlist) {
-                            button.classList.add('wishlisted');
+            function saveWishlist(wishlist) {
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            }
+
+            function toggleWishlist(button, name, price, image) {
+                if (!isUserLoggedIn()) {
+                    redirectToLogin();
+                    return;
+                }
+
+                let wishlist = getWishlist();
+                const existingIndex = wishlist.findIndex(item => item.name === name);
+
+                if (existingIndex > -1) {
+                    // Item already in wishlist, remove it
+                    wishlist.splice(existingIndex, 1);
+                    button.classList.remove('wishlisted');
+                } else {
+                    // Add to wishlist
+                    wishlist.push({ name: name, price: price, image: image });
+                    button.classList.add('wishlisted');
+                }
+                saveWishlist(wishlist);
+
+                // Show feedback
+                if (button.classList.contains('wishlisted')) {
+                    alert(name + ' added to wishlist!');
+                } else {
+                    alert(name + ' removed from wishlist.');
+                }
+            }
+
+
+            // Check wishlist status on page load
+            document.addEventListener('DOMContentLoaded', function () {
+                const wishlist = getWishlist();
+                const wishlistButtons = document.querySelectorAll('.product-card .icon-btn');
+
+                wishlistButtons.forEach(button => {
+                    const icon = button.querySelector('i');
+                    if (icon && icon.classList.contains('fa-heart')) {
+                        // Get product info from the parent product-card
+                        const productCard = button.closest('.product-card');
+                        if (productCard) {
+                            const name = productCard.getAttribute('data-name');
+                            const isInWishlist = wishlist.some(item => item.name === name);
+                            if (isInWishlist) {
+                                button.classList.add('wishlisted');
+                            }
                         }
                     }
-                }
-            });
-            
-            // Attach buy now functionality to all buy buttons
-            const buyButtons = document.querySelectorAll('.product-card .buy-btn');
-            buyButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const productCard = button.closest('.product-card');
-                    if (productCard) {
-                        const name = productCard.getAttribute('data-name');
-                        const price = productCard.getAttribute('data-price');
-                        const image = productCard.getAttribute('data-image');
-                        buyNow(name, price, image);
-                    }
+                });
+
+                // Attach buy now functionality to all buy buttons
+                const buyButtons = document.querySelectorAll('.product-card .buy-btn');
+                buyButtons.forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        const productCard = button.closest('.product-card');
+                        if (productCard) {
+                            const name = productCard.getAttribute('data-name');
+                            const price = productCard.getAttribute('data-price');
+                            const image = productCard.getAttribute('data-image');
+                            buyNow(name, price, image);
+                        }
+                    });
                 });
             });
-        });
 
-    </script>
+        </script>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <h3>DecorVista</h3>
+                <p>Transforming houses into dream homes with premium furniture and exceptional service since 2011.</p>
+                <p class="tagline">"Your Home, Your Style"</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                    <li><a href="index.html#category"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links-list">
+                    <li><a href="profile.html"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                    <li><a href="wishlist.html"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Shopping Cart</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+
+            <!-- Newsletter -->
+            <!-- <div class="footer-section footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get exclusive offers, design tips, and new arrival updates!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div> -->
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <p>Follow Us On Social Media</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+
+            <!-- Payment Methods -->
+            <!-- <div class="payment-methods">
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-amex" title="American Express"></i>
+                <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+            </div> -->
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DecorVista | All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

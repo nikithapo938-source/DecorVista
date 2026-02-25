@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - DecorVista</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         .profile-container {
             padding-top: 80px;
@@ -109,7 +111,7 @@
             background-color: white;
             border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(168, 159, 159, 0.904);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -119,7 +121,7 @@
         }
 
         .dashboard-card h3 {
-            color: #2c3e50;
+            color: #f7382b;
             font-size: 1.3rem;
             margin-bottom: 1rem;
             display: flex;
@@ -151,11 +153,11 @@
         }
 
         .dashboard-btn:hover {
-            background-color: #c0392b;
+            background-color: #b82b1c;
         }
 
         .dashboard-btn.secondary {
-            background-color: #95a5a6;
+            background-color: #df3636;
         }
 
         .dashboard-btn.secondary:hover {
@@ -285,17 +287,261 @@
         .hidden {
             display: none !important;
         }
+
+        /* Address Management Styles */
+        .address-list {
+            margin-top: 1rem;
+        }
+
+        .address-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fafafa;
+            position: relative;
+        }
+
+        .address-item.default {
+            border-color: #e74c3c;
+            background-color: #fdf2f2;
+        }
+
+        .address-item.default::before {
+            content: 'Default';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            border-radius: 0 7px 0 5px;
+        }
+
+        .address-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .address-details {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .address-phone {
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .address-actions {
+            margin-top: 0.75rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .address-btn {
+            padding: 0.4rem 0.8rem;
+            border: none;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .address-btn.edit {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .address-btn.edit:hover {
+            background-color: #2980b9;
+        }
+
+        .address-btn.delete {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .address-btn.delete:hover {
+            background-color: #c0392b;
+        }
+
+        .address-btn.default {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        .address-btn.default:hover {
+            background-color: #7f8c8d;
+        }
+
+        .address-btn.default.active {
+            background-color: #27ae60;
+        }
+
+        /* Address Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h3 {
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: #e74c3c;
+        }
+
+        .address-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .address-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .address-form input,
+        .address-form select,
+        .address-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .address-form input:focus,
+        .address-form select:focus,
+        .address-form textarea:focus {
+            border-color: #e74c3c;
+            outline: none;
+        }
+
+        .address-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .save-address-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .save-address-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .no-addresses {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 480px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
-            <div class="hamburger" onclick="toggleSidebar()">
+            <!-- <div class="hamburger" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
-            </div>
+            </div> -->
             <div class="logo">
                 <h1>DecorVista</h1>
             </div>
+
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
@@ -303,7 +549,7 @@
                 <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
             <div class="nav-right">
-                <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+                <!-- <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a> -->
                 <div class="search-bar">
                     <input type="text" placeholder="Search products...">
                     <button type="submit"><i class="fas fa-search"></i></button>
@@ -315,7 +561,7 @@
                 </div>
             </div>
         </nav>
-        <div id="sidebar" class="sidebar">
+        <!-- <div id="sidebar" class="sidebar">
             <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
             <h3>Menu</h3>
             <ul>
@@ -325,7 +571,7 @@
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="profile.html">Profile</a></li>
             </ul>
-        </div>
+        </div> -->
     </header>
 
     <main class="profile-container">
@@ -406,6 +652,16 @@
                     </a>
                 </div>
 
+                <!-- My Addresses -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> My Addresses</h3>
+                    <p>Manage your delivery addresses</p>
+                    <p><strong id="addressCount">0</strong> saved addresses</p>
+                    <button class="dashboard-btn" onclick="openAddressModal()">
+                        <i class="fas fa-plus"></i> Manage Addresses
+                    </button>
+                </div>
+
                 <!-- Continue Shopping -->
                 <div class="dashboard-card">
                     <h3><i class="fas fa-store"></i> Continue Shopping</h3>
@@ -418,17 +674,174 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 DecorVista | All rights reserved.</p>
-        <div class="footer-links">
-            <a href="index.html">Home</a> | <a href="index.html#about">About</a> | <a href="products.html">Products</a> | <a href="index.html#contact">Contact</a>
+    <!-- Address Management Modal -->
+    <div id="addressModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-map-marker-alt"></i> <span id="modalTitle">Add New Address</span></h3>
+                <button class="modal-close" onclick="closeAddressModal()">&times;</button>
+            </div>
+            
+            <form id="addressForm" class="address-form" onsubmit="saveAddress(event)">
+                <input type="hidden" id="addressId">
+                
+                <div class="form-group">
+                    <label for="addressName">Full Name *</label>
+                    <input type="text" id="addressName" required placeholder="Enter recipient's full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="addressStreet">Street Address *</label>
+                    <textarea id="addressStreet" required placeholder="Enter street address, apartment, suite, etc."></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addressCity">City *</label>
+                        <input type="text" id="addressCity" required placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <label for="addressState">State/Province *</label>
+                        <input type="text" id="addressState" required placeholder="State/Province">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addressZip">ZIP/Postal Code *</label>
+                        <input type="text" id="addressZip" required placeholder="ZIP/Postal Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="addressCountry">Country *</label>
+                        <select id="addressCountry" required>
+                            <option value="">Select Country</option>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                            <option value="India">India</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="addressPhone">Phone Number *</label>
+                    <input type="tel" id="addressPhone" required placeholder="Enter phone number">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="isDefault">
+                    <label for="isDefault">Set as default address</label>
+                </div>
+                
+                <button type="submit" class="save-address-btn">
+                    <i class="fas fa-save"></i> Save Address
+                </button>
+            </form>
+            
+            <div id="savedAddressesSection" style="margin-top: 2rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                    <i class="fas fa-list"></i> Saved Addresses
+                </h4>
+                <div id="addressList" class="address-list">
+                    <!-- Addresses will be populated here -->
+                </div>
+            </div>
         </div>
-        <div class="social-media">
-            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <h3>DecorVista</h3>
+                <p>Transforming houses into dream homes with premium furniture and exceptional service since 2011.</p>
+                <p class="tagline">"Your Home, Your Style"</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                    <li><a href="index.html#category"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links-list">
+                    <li><a href="profile.html"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                    <li><a href="wishlist.html"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Shopping Cart</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+
+            <!-- Newsletter -->
+            <!-- <div class="footer-section footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get exclusive offers, design tips, and new arrival updates!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div> -->
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <p>Follow Us On Social Media</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+
+            <!-- Payment Methods -->
+            <!-- <div class="payment-methods">
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-amex" title="American Express"></i>
+                <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+            </div> -->
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DecorVista | All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
         </div>
     </footer>
+
 
     <script>
         // Toggle sidebar
@@ -481,37 +894,6 @@
             updateCounts();
         }
 
-        // Handle account creation
-        document.getElementById('accountForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const fullName = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            
-            // Validate passwords match
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return;
-            }
-            
-            // Create user account object
-            const userAccount = {
-                fullName: fullName,
-                email: email,
-                password: password, // In a real app, this should be hashed
-                createdAt: new Date().toISOString()
-            };
-            
-            // Save to localStorage
-            localStorage.setItem('userAccount', JSON.stringify(userAccount));
-            
-            // Show success message and dashboard
-            alert('Account created successfully! Welcome to DecorVista, ' + fullName + '!');
-            showDashboard(userAccount);
-        });
-
         // Load order history
         function loadOrderHistory() {
             const orders = JSON.parse(localStorage.getItem('orders')) || [];
@@ -561,18 +943,196 @@
             }
         }
 
-
-
-        // Update wishlist and cart counts
+        // Update counts
         function updateCounts() {
+
+
             const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const addresses = JSON.parse(localStorage.getItem('addresses')) || [];
             
             document.getElementById('wishlistCount').textContent = wishlist.length;
             
             const cartCount = cart.reduce((total, item) => total + (item.quantity || 1), 0);
             document.getElementById('cartCount').textContent = cartCount;
+            document.getElementById('addressCount').textContent = addresses.length;
         }
+
+        // Address Management Functions
+        function openAddressModal() {
+            document.getElementById('addressModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            loadAddresses();
+            resetAddressForm();
+        }
+
+        function closeAddressModal() {
+            document.getElementById('addressModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function resetAddressForm() {
+            document.getElementById('addressForm').reset();
+            document.getElementById('addressId').value = '';
+            document.getElementById('modalTitle').textContent = 'Add New Address';
+        }
+
+        function loadAddresses() {
+            const addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+            const addressList = document.getElementById('addressList');
+            
+            if (addresses.length === 0) {
+                addressList.innerHTML = '<p class="no-addresses">No addresses saved yet. Add your first address above!</p>';
+                return;
+            }
+            
+            addressList.innerHTML = addresses.map((address, index) => `
+                <div class="address-item ${address.isDefault ? 'default' : ''}">
+                    <div class="address-name">${address.name}</div>
+                    <div class="address-details">
+                        ${address.street}<br>
+                        ${address.city}, ${address.state} ${address.zip}<br>
+                        ${address.country}
+                    </div>
+                    <div class="address-phone">
+                        <i class="fas fa-phone"></i> ${address.phone}
+                    </div>
+                    <div class="address-actions">
+                        <button class="address-btn edit" onclick="editAddress(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="address-btn delete" onclick="deleteAddress(${index})">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                        ${!address.isDefault ? `
+                        <button class="address-btn default" onclick="setDefaultAddress(${index})">
+                            <i class="fas fa-check"></i> Set Default
+                        </button>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function saveAddress(event) {
+            event.preventDefault();
+            
+            const addressId = document.getElementById('addressId').value;
+            const name = document.getElementById('addressName').value;
+            const street = document.getElementById('addressStreet').value;
+            const city = document.getElementById('addressCity').value;
+            const state = document.getElementById('addressState').value;
+            const zip = document.getElementById('addressZip').value;
+            const country = document.getElementById('addressCountry').value;
+            const phone = document.getElementById('addressPhone').value;
+            const isDefault = document.getElementById('isDefault').checked;
+            
+            let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+            
+            const addressData = {
+                name,
+                street,
+                city,
+                state,
+                zip,
+                country,
+                phone,
+                isDefault
+            };
+            
+            if (addressId !== '') {
+                // Edit existing address
+                const index = parseInt(addressId);
+                addresses[index] = addressData;
+            } else {
+                // Add new address
+                if (isDefault) {
+                    // Remove default from other addresses
+                    addresses.forEach(addr => addr.isDefault = false);
+                }
+                addresses.push(addressData);
+            }
+            
+            // If this is the first address, make it default
+            if (addresses.length === 1) {
+                addresses[0].isDefault = true;
+            }
+            
+            localStorage.setItem('addresses', JSON.stringify(addresses));
+            
+            alert(addressId !== '' ? 'Address updated successfully!' : 'Address added successfully!');
+            resetAddressForm();
+            loadAddresses();
+            updateCounts();
+        }
+
+        function editAddress(index) {
+            const addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+            const address = addresses[index];
+            
+            document.getElementById('addressId').value = index;
+            document.getElementById('addressName').value = address.name;
+            document.getElementById('addressStreet').value = address.street;
+            document.getElementById('addressCity').value = address.city;
+            document.getElementById('addressState').value = address.state;
+            document.getElementById('addressZip').value = address.zip;
+            document.getElementById('addressCountry').value = address.country;
+            document.getElementById('addressPhone').value = address.phone;
+            document.getElementById('isDefault').checked = address.isDefault;
+            document.getElementById('modalTitle').textContent = 'Edit Address';
+            
+            // Scroll to form
+            document.getElementById('addressForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function deleteAddress(index) {
+            if (confirm('Are you sure you want to delete this address?')) {
+                let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+                addresses.splice(index, 1);
+                
+                // If we deleted the default address, make the first one default
+                if (addresses.length > 0) {
+                    const hasDefault = addresses.some(addr => addr.isDefault);
+                    if (!hasDefault) {
+                        addresses[0].isDefault = true;
+                    }
+                }
+                
+                localStorage.setItem('addresses', JSON.stringify(addresses));
+                loadAddresses();
+                updateCounts();
+                alert('Address deleted successfully!');
+            }
+        }
+
+        function setDefaultAddress(index) {
+            let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+            
+            // Remove default from all addresses
+            addresses.forEach(addr => addr.isDefault = false);
+            
+            // Set new default
+            addresses[index].isDefault = true;
+            
+            localStorage.setItem('addresses', JSON.stringify(addresses));
+            loadAddresses();
+            alert('Default address updated!');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('addressModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeAddressModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeAddressModal();
+            }
+        });
+
 
         // Logout function
         function logout() {
@@ -583,10 +1143,41 @@
             }
         }
 
+        // Account form submission handler
+        document.getElementById('accountForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+            
+            // Create user account object
+            const userAccount = {
+                fullName: fullName,
+                email: email,
+                createdAt: new Date().toISOString()
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('userAccount', JSON.stringify(userAccount));
+            
+            // Show success message and dashboard
+            alert('Account created successfully! Welcome to DecorVista, ' + fullName + '!');
+            showDashboard(userAccount);
+        });
+
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             checkLoginStatus();
         });
+
     </script>
 </body>
 </html>

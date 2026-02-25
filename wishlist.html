@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishlist - DecorVista</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         .wishlist-container {
             padding: 4rem 5%;
@@ -156,12 +159,15 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
                 <h1>DecorVista</h1>
             </div>
+
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
@@ -189,17 +195,94 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 DecorVista | All rights reserved.</p>
-        <div class="footer-links">
-            <a href="index.html">Home</a> | <a href="index.html#about">About</a> | <a href="products.html">Products</a> | <a href="index.html#contact">Contact</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <h3>DecorVista</h3>
+                <p>Transforming houses into dream homes with premium furniture and exceptional service since 2011.</p>
+                <p class="tagline">"Your Home, Your Style"</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                    <li><a href="index.html#category"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links-list">
+                    <li><a href="profile.html"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                    <li><a href="wishlist.html"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Shopping Cart</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+
+            <!-- Newsletter -->
+            <!-- <div class="footer-section footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get exclusive offers, design tips, and new arrival updates!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div> -->
         </div>
-        <div class="social-media">
-            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <p>Follow Us On Social Media</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+
+            <!-- Payment Methods -->
+            <!-- <div class="payment-methods">
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-amex" title="American Express"></i>
+                <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+            </div> -->
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DecorVista | All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
         </div>
     </footer>
+
 
     <script>
         // Get wishlist from localStorage
@@ -208,7 +291,16 @@
             return wishlist ? JSON.parse(wishlist) : [];
         }
 
+        // Format price with Indian Rupee symbol
+        function formatPrice(price) {
+            if (!price) return '₹0';
+            // Remove existing currency symbol if present and add ₹
+            const numericValue = price.toString().replace(/[₹$€£]/g, '').trim();
+            return '₹' + numericValue;
+        }
+
         // Save wishlist to localStorage
+
         function saveWishlist(wishlist) {
             localStorage.setItem('wishlist', JSON.stringify(wishlist));
         }
@@ -236,7 +328,7 @@
         function addToCart(name, price, image) {
             let cart = getCart();
             const existingItem = cart.find(item => item.name === name);
-            
+
             if (existingItem) {
                 existingItem.quantity = (existingItem.quantity || 1) + 1;
             } else {
@@ -247,7 +339,7 @@
                     quantity: 1
                 });
             }
-            
+
             saveCart(cart);
             alert(name + ' added to cart!');
         }
@@ -257,10 +349,10 @@
             if (confirm(`Are you sure you want to buy ${name} for ${price}?\n\nThis will place an order immediately.`)) {
                 // Get existing orders or initialize empty array
                 let orders = JSON.parse(localStorage.getItem('orders')) || [];
-                
+
                 // Generate order ID
                 const orderId = 'ORD-' + String(orders.length + 1).padStart(3, '0');
-                
+
                 // Create new order
                 const newOrder = {
                     id: orderId,
@@ -270,16 +362,16 @@
                     status: 'Processing',
                     image: image
                 };
-                
+
                 // Add to orders
                 orders.push(newOrder);
-                
+
                 // Save to localStorage
                 localStorage.setItem('orders', JSON.stringify(orders));
-                
+
                 // Show success message
                 alert(`Order placed successfully!\n\nOrder ID: ${orderId}\nProduct: ${name}\nTotal: ${price}\n\nYou can view your order in the Profile page.`);
-                
+
                 // Optionally redirect to profile page
                 if (confirm('Would you like to view your order history?')) {
                     window.location.href = 'profile.html';
@@ -306,14 +398,16 @@
                 `;
             } else {
                 let itemsHTML = '<div class="wishlist-items">';
-                
+
                 wishlist.forEach(item => {
                     itemsHTML += `
                         <div class="wishlist-item">
-                            <img src="${item.image}" alt="${item.name}" class="wishlist-item-image">
+                            <img src="${item.image}" alt="${item.name}" class="wishlist-item-image" onerror="this.src='https://via.placeholder.com/280x200?text=Image+Not+Available'">
                             <div class="wishlist-item-info">
                                 <div class="wishlist-item-name">${item.name}</div>
-                                <div class="wishlist-item-price">${item.price}</div>
+                                <div class="wishlist-item-price">${formatPrice(item.price)}</div>
+
+
                                 <div class="wishlist-item-actions">
                                     <button class="buy-now-btn" onclick="buyNow('${item.name.replace(/'/g, "\\'")}', '${item.price}', '${item.image.replace(/'/g, "\\'")}')">
                                         <i class="fas fa-bolt"></i> Buy Now
@@ -337,9 +431,10 @@
         }
 
         // Load wishlist on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             displayWishlist();
         });
     </script>
 </body>
+
 </html>

@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.911);
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
@@ -101,7 +101,7 @@ body {
 /* Hero section */
 .hero {
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1958&q=80');
+    background-image: url('Images/pexels-esteban-santiago-gonzalez-239179106-12269764.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -120,7 +120,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background: linear-gradient(135deg, rgba(233, 238, 237, 0.925) 0%, rgba(52, 73, 94, 0.5) 100%); */
     z-index: 1;
 }
 
@@ -232,7 +232,7 @@ body {
 
 .feature-icon {
     font-size: 3rem;
-    color: #e74c3c;
+    color: #2c3e50;
     margin-bottom: 1rem;
 }
 
