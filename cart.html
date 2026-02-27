@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -250,6 +251,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -337,7 +339,8 @@
             <!-- Contact Info -->
             <div class="footer-section footer-contact">
                 <h4>Contact Us</h4>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mangalore, Karnataka 400001</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Design District<br>Mangalore, Karnataka
+                    400001</p>
                 <p><i class="fas fa-phone"></i> +91 98765 43210</p>
                 <p><i class="fas fa-envelope"></i> support@decorvista.com</p>
                 <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
@@ -405,7 +408,7 @@
         function addToCart(name, price, image) {
             let cart = getCart();
             const existingItem = cart.find(item => item.name === name);
-            
+
             if (existingItem) {
                 existingItem.quantity = (existingItem.quantity || 1) + 1;
             } else {
@@ -416,7 +419,7 @@
                     quantity: 1
                 });
             }
-            
+
             saveCart(cart);
             alert(name + ' added to cart!');
         }
@@ -433,7 +436,7 @@
         function updateQuantity(name, change) {
             let cart = getCart();
             const item = cart.find(item => item.name === name);
-            
+
             if (item) {
                 item.quantity = (item.quantity || 1) + change;
                 if (item.quantity <= 0) {
@@ -449,15 +452,15 @@
         function calculateTotals(cart) {
             let subtotal = 0;
             cart.forEach(item => {
-const price = parseFloat(item.price.replace('₹', ''));
+                const price = parseFloat(item.price.replace('₹', ''));
 
                 subtotal += price * (item.quantity || 1);
             });
-            
+
             const shipping = subtotal > 50 ? 0 : 10;
             const tax = subtotal * 0.08;
             const total = subtotal + shipping + tax;
-            
+
             return {
                 subtotal: subtotal.toFixed(2),
                 shipping: shipping.toFixed(2),
@@ -484,10 +487,10 @@ const price = parseFloat(item.price.replace('₹', ''));
                 `;
             } else {
                 const totals = calculateTotals(cart);
-                
+
                 let itemsHTML = '<div class="cart-content">';
                 itemsHTML += '<div class="cart-items">';
-                
+
                 cart.forEach(item => {
                     itemsHTML += `
                         <div class="cart-item">
@@ -511,9 +514,9 @@ const price = parseFloat(item.price.replace('₹', ''));
                         </div>
                     `;
                 });
-                
+
                 itemsHTML += '</div>';
-                
+
                 itemsHTML += `
                     <div class="cart-summary">
                         <h3>Order Summary</h3>
@@ -542,7 +545,7 @@ const price = parseFloat(item.price.replace('₹', ''));
                         <a href="products.html" class="continue-shopping">Continue Shopping</a>
                     </div>
                 `;
-                
+
                 itemsHTML += '</div>';
                 cartContent.innerHTML = itemsHTML;
             }
@@ -555,26 +558,26 @@ const price = parseFloat(item.price.replace('₹', ''));
                 alert('Your cart is empty!');
                 return;
             }
-            
+
             // Create order
             const totals = calculateTotals(cart);
             const order = {
                 id: 'ORD-' + Date.now(),
                 date: new Date().toISOString().split('T')[0],
                 items: cart.map(item => item.name),
-total: '₹' + totals.total,
+                total: '₹' + totals.total,
 
                 status: 'Processing'
             };
-            
+
             // Save order to order history
             let orders = JSON.parse(localStorage.getItem('orders')) || [];
             orders.push(order);
             localStorage.setItem('orders', JSON.stringify(orders));
-            
+
             // Clear cart
             localStorage.removeItem('cart');
-            
+
             alert('Order placed successfully! Order ID: ' + order.id);
             displayCart();
         }
@@ -586,21 +589,22 @@ total: '₹' + totals.total,
         }
 
         // Close sidebar when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const sidebar = document.getElementById('sidebar');
             const hamburger = document.querySelector('.hamburger');
-            
-            if (sidebar.classList.contains('active') && 
-                !sidebar.contains(event.target) && 
+
+            if (sidebar.classList.contains('active') &&
+                !sidebar.contains(event.target) &&
                 !hamburger.contains(event.target)) {
                 sidebar.classList.remove('active');
             }
         });
 
         // Load cart on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             displayCart();
         });
     </script>
 </body>
+
 </html>

@@ -32,7 +32,7 @@
             opacity: 0.9;
         }
 
-        /* Account Creation Form */
+        /* Account Forms */
         .account-form-section {
             max-width: 500px;
             margin: 3rem auto;
@@ -77,7 +77,7 @@
             outline: none;
         }
 
-        .create-account-btn {
+        .create-account-btn, .sign-in-btn {
             width: 100%;
             padding: 1rem;
             background-color: #e74c3c;
@@ -90,9 +90,42 @@
             transition: background-color 0.3s;
         }
 
-        .create-account-btn:hover {
+        .create-account-btn:hover, .sign-in-btn:hover {
             background-color: #c0392b;
         }
+
+        .toggle-form {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .toggle-form p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .toggle-btn:hover {
+            color: #c0392b;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
 
         /* Dashboard Styles */
         .dashboard-section {
@@ -581,9 +614,33 @@
             <p>Your personal furniture shopping destination</p>
         </section>
 
-        <!-- Account Creation Form (shown when no account) -->
+        <!-- Account Forms (Sign In / Create Account) -->
         <section id="accountFormSection" class="account-form-section">
-            <div class="account-card">
+            <!-- Sign In Form -->
+            <div id="signInForm" class="account-card">
+                <h3><i class="fas fa-sign-in-alt"></i> Sign In</h3>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required placeholder="Enter your password">
+                    </div>
+                    <div id="loginError" class="error-message">Invalid email or password. Please try again.</div>
+                    <button type="submit" class="sign-in-btn">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                </form>
+                <div class="toggle-form">
+                    <p>Don't have an account?</p>
+                    <button class="toggle-btn" onclick="toggleForm('create')">Create Account</button>
+                </div>
+            </div>
+
+            <!-- Create Account Form -->
+            <div id="createAccountForm" class="account-card hidden">
                 <h3><i class="fas fa-user-plus"></i> Create Your Account</h3>
                 <form id="accountForm">
                     <div class="form-group">
@@ -596,18 +653,24 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                        <input type="password" id="password" name="password" required placeholder="Create a password" minlength="6">
                     </div>
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
                         <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
                     </div>
+                    <div id="createError" class="error-message"></div>
                     <button type="submit" class="create-account-btn">
                         <i class="fas fa-user-check"></i> Create Account
                     </button>
                 </form>
+                <div class="toggle-form">
+                    <p>Already have an account?</p>
+                    <button class="toggle-btn" onclick="toggleForm('signin')">Sign In</button>
+                </div>
             </div>
         </section>
+
 
         <!-- Account Dashboard (shown when account exists) -->
         <section id="dashboardSection" class="dashboard-section hidden">
@@ -864,19 +927,41 @@
 
         // Check if user is logged in
         function checkLoginStatus() {
-            const userAccount = localStorage.getItem('userAccount');
-            if (userAccount) {
-                showDashboard(JSON.parse(userAccount));
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                showDashboard(JSON.parse(currentUser));
             } else {
                 showAccountForm();
             }
         }
 
-        // Show account creation form
+        // Show account forms (sign in by default)
         function showAccountForm() {
             document.getElementById('accountFormSection').classList.remove('hidden');
             document.getElementById('dashboardSection').classList.add('hidden');
+            // Default to sign in form
+            document.getElementById('signInForm').classList.remove('hidden');
+            document.getElementById('createAccountForm').classList.add('hidden');
         }
+
+        // Toggle between sign in and create account forms
+        function toggleForm(formType) {
+            const signInForm = document.getElementById('signInForm');
+            const createAccountForm = document.getElementById('createAccountForm');
+            
+            if (formType === 'create') {
+                signInForm.classList.add('hidden');
+                createAccountForm.classList.remove('hidden');
+            } else {
+                createAccountForm.classList.add('hidden');
+                signInForm.classList.remove('hidden');
+            }
+            
+            // Clear error messages
+            document.getElementById('loginError').style.display = 'none';
+            document.getElementById('createError').style.display = 'none';
+        }
+
 
         // Show dashboard
         function showDashboard(userData) {
@@ -1137,13 +1222,44 @@
         // Logout function
         function logout() {
             if (confirm('Are you sure you want to logout?')) {
-                localStorage.removeItem('userAccount');
+                localStorage.removeItem('currentUser');
                 showAccountForm();
                 alert('You have been logged out successfully.');
             }
         }
 
-        // Account form submission handler
+        // Sign In form submission handler
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Get all registered users
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            
+            // Find user with matching email and password
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                // Store current user session (without password)
+                const currentUser = {
+                    fullName: user.fullName,
+                    email: user.email,
+                    createdAt: user.createdAt
+                };
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                
+                // Show success message and dashboard
+                alert('Welcome back, ' + user.fullName + '!');
+                showDashboard(currentUser);
+            } else {
+                // Show error message
+                document.getElementById('loginError').style.display = 'block';
+            }
+        });
+
+        // Account form submission handler (Create Account)
         document.getElementById('accountForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1151,27 +1267,51 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorDiv = document.getElementById('createError');
             
             // Validate passwords match
             if (password !== confirmPassword) {
-                alert('Passwords do not match. Please try again.');
+                errorDiv.textContent = 'Passwords do not match. Please try again.';
+                errorDiv.style.display = 'block';
                 return;
             }
             
-            // Create user account object
-            const userAccount = {
+            // Get existing users
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            
+            // Check if email already exists
+            const existingUser = users.find(u => u.email === email);
+            if (existingUser) {
+                errorDiv.textContent = 'An account with this email already exists. Please sign in.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            // Create new user account
+            const newUser = {
                 fullName: fullName,
                 email: email,
+                password: password,
                 createdAt: new Date().toISOString()
             };
             
-            // Save to localStorage
-            localStorage.setItem('userAccount', JSON.stringify(userAccount));
+            // Add to users array
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            // Set as current user (without password)
+            const currentUser = {
+                fullName: fullName,
+                email: email,
+                createdAt: newUser.createdAt
+            };
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
             
             // Show success message and dashboard
             alert('Account created successfully! Welcome to DecorVista, ' + fullName + '!');
-            showDashboard(userAccount);
+            showDashboard(currentUser);
         });
+
 
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {

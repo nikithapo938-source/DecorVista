@@ -801,11 +801,18 @@
                 return userAccount !== null;
             }
 
-            // Redirect to profile page for login
+            // Redirect to profile page for login else remain at product page
             function redirectToLogin() {
-                alert('Please create an account or log in to continue.');
-                window.location.href = 'profile.html';
+                let Create_ac = confirm('Please create an account or log in to continue.');
+                if(Create_ac === true){
+
+                    window.location.href = 'profile.html';
+                }
+                else{
+                    window.location.href = 'products.html'
+                }
             }
+            
 
 
             // Search functionality
