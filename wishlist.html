@@ -180,7 +180,7 @@
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="icons">
-                    <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+                    <a href="#" onclick="RedActivate(event)"><i id="Red-btn" class="fas fa-heart"></i></a>
                     <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                     <a href="profile.html"><i class="fas fa-user"></i></a>
                 </div>
@@ -285,6 +285,30 @@
 
 
     <script>
+        //Red color activate
+        function RedActivate(event){
+            event.preventDefault(); // Prevent page navigation
+            let red_btn = document.getElementById("Red-btn");
+            
+            // Toggle the red color
+            if (red_btn.style.color === 'red') {
+                red_btn.style.color = ''; // Reset to default
+                localStorage.setItem('wishlistIconRed', 'false');
+            } else {
+                red_btn.style.color = 'red';
+                localStorage.setItem('wishlistIconRed', 'true');
+            }
+        }
+        
+        // Check wishlist icon color on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const red_btn = document.getElementById("Red-btn");
+            const isRed = localStorage.getItem('wishlistIconRed') === 'true';
+            if (isRed) {
+                red_btn.style.color = 'red';
+            }
+        });
+
         // Get wishlist from localStorage
         function getWishlist() {
             const wishlist = localStorage.getItem('wishlist');
